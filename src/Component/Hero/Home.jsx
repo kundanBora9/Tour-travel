@@ -1,7 +1,6 @@
 import "./../../../src/App.css";
 import slider_1 from "../Hero/images/slider_1.jpg";
 import slider_2 from "../Hero/images/slider_2.jpg";
-import slider_3 from "../Hero/images/slider_3.jpg";
 import slider_4 from "../Hero/images/slider_4.jpg";
 import sameday from ".//images/sameday.jpeg";
 import GoldenTriangle from ".//images/GoldenTriangle.png";
@@ -188,7 +187,7 @@ function Home() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md "
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -273,7 +272,7 @@ function Home() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -358,7 +357,7 @@ function Home() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -443,7 +442,7 @@ function Home() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -535,7 +534,7 @@ function Home() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -617,7 +616,7 @@ function Home() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -699,7 +698,7 @@ function Home() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -794,7 +793,7 @@ function Home() {
                   
                   <div>
                     <button
-                      className="bg-[#E18A2C] text-white p-2 rounded-md"
+                      className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                       onClick={handleOpenModal}
                     >
                       Book Now
