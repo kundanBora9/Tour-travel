@@ -1,6 +1,6 @@
 import React from "react";
 import GoldenTriangle from "../../assets/Golden-triangle.jpeg";
-import IndiaGate from "../../assets/IndiaGate.jpg";
+import HumayunTOmb from "../../assets/humayuntomb.jpg"
 function GoldenTri() {
   return (
     <div>
@@ -15,21 +15,23 @@ function GoldenTri() {
           <p className="text-center lato-regular text-3xl">4-night, 5-day </p>
         </div>
       </div>
-      <div className="flex justify-between items-center">
-        <div>
-          <h1 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
-            Day 1: Arrival in Delhi
-          </h1>
-          <p className="font-normal text-gray-900 lato-bold">
-            Morning/Afternoon: Arrive in Delhi and check in at your hotel.
-            Sightseeing: Visit Qutub Minar, Humayun’s Tomb and India Gate. Drive
-            past the Presidential Palace and Parliament House. Evening: Explore
-            Connaught Place or visit the lively market at Chandni Chowk.<br></br>
-            Overnight: Stay in Delhi.
-          </p>
-        </div>
-        <div><img src={IndiaGate} alt="" className="h-1/4 w-1/4" /></div>
-      </div>
+      <div className="flex flex-wrap justify-center">
+  <div className="w-full md:w-1/2">
+    <h1 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
+      Day 1: Arrival in Delhi
+    </h1>
+    <p className="font-normal text-gray-900 lato-bold">
+      Morning/Afternoon: Arrive in Delhi and check in at your hotel.
+      Sightseeing: Visit Qutub Minar, Humayun’s Tomb and India Gate. Drive
+      past the Presidential Palace and Parliament House. Evening: Explore
+      Connaught Place or visit the lively market at Chandni Chowk.<br></br>
+      Overnight: Stay in Delhi.
+    </p>
+  </div>
+  <div className="w-full md:w-1/2 flex justify-center">
+    <img src={HumayunTOmb} alt="" className="h-full w-1/2 md:h-full md:w-1/2 shadow-lg rounded-lg" />
+  </div>
+</div>
       <div>
         <div></div>
         <h1>Day 2: Delhi to Agra (about 3-4 hours by road) </h1>
