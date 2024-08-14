@@ -34,7 +34,7 @@ function GoldenTri() {
           <img
             src={HumayunTOmb}
             alt=""
-            className="h-full w-1/2 md:h-full md:w-1/2 shadow-lg rounded-lg"
+            className="h-screen w-screen md:h-full md:w-1/2 shadow-lg rounded-lg"
           />
         </div>
       </div>
