@@ -15,7 +15,7 @@ function Header() {
   };
   return (
     <Navbar fluid rounded className="bg-[#0C6A88] playfair">
-      <Navbar.Brand href="https://flowbite-react.com">
+      <Navbar.Brand href="/">
         <img src={logo} className="mr-3 h-44 sm:h-9" alt="Namasta odyessey" />
       </Navbar.Brand>
       <div className="flex md:order-2">
