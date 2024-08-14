@@ -11,11 +11,11 @@ function GoldenTri() {
           className="h-72 w-full  brightness-50"
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg">
-          <h1 className="text-6xl text-white playfair">Golden Track</h1>
+          <h1 className="text-6xl text-white playfair">Golden Triangle</h1>
           <p className="text-center lato-regular text-3xl">4-night, 5-day </p>
         </div>
       </div>
-      <div className="flex justify-evenly items-center">
+      <div className="flex justify-between items-center">
         <div>
           <h1 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
             Day 1: Arrival in Delhi
@@ -53,7 +53,7 @@ function GoldenTri() {
         <h1>Day 4: Jaipur</h1>
         <p>
           Morning: Visit Amer Fort, Jal Mahal and Hawa Mahal. Afternoon: Explore
-          the City Hall and Jantar Antar. Evening: Stroll the local markets or
+          the City Hall and Jantar mantar. Evening: Stroll the local markets or
           hike the Pink City Walls. Overnight: Stay in Jaipur.
         </p>
       </div>
@@ -62,9 +62,7 @@ function GoldenTri() {
         <p>
           Morning: Depending on the time, you can visit other places in Jaipur
           like Nahargarh Fort or Albert Hall Museum. Afternoon: Drive (or fly)
-          back to Delhi for another adventure. This itinerary covers the main
-          attractions in each city while providing a leisurely pace. If you need
-          changes or additional information, don’t hesitate to ask!{" "}
+          back to Delhi for another adventure.
         </p>
       </div>
     </div>

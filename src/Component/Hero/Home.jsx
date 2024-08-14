@@ -514,7 +514,7 @@ function Home() {
 
       <div>
         <h1 className=" font-bold text-center mt-10 playfair text-6xl">
-          Rajesthan Tour
+          Rajasthan Tour
         </h1>
         <div className="flex justify-evenly flex-wrap items-center">
           <div className="rajestha">
