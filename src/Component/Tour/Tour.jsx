@@ -134,7 +134,7 @@ function Tour() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -219,7 +219,7 @@ function Tour() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -304,7 +304,7 @@ function Tour() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -389,7 +389,7 @@ function Tour() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -459,94 +459,12 @@ function Tour() {
 
       {/* Rajesthan Tour */}
 
+      
       <div>
         <h1 className=" font-bold text-center mt-10 playfair text-6xl">
-          Rajesthan Tour
+          Rajasthan Tour
         </h1>
         <div className="flex justify-evenly flex-wrap items-center">
-          <div className="rajestha">
-            <Card
-              className="max-w-sm mt-5"
-              imgAlt="Meaningful alt text for an image that is not purely decorative"
-              imgSrc={Jaipur}
-            >
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-                Jaipur
-              </h5>
-              
-              <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> For Two Nights
-              </p>
-              <div className="flex justify-evenly items-center">
-                <p>Read More</p>
-                <div>
-                  <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
-                    onClick={handleOpenModal}
-                  >
-                    Book Now
-                  </button>
-                  <Modal isOpen={isOpen} onClose={handleCloseModal}>
-                    <div className="flex justify-center items-center size-full">
-                      <div className="card-1">
-                        <h1 className="playfair text-6xl font-bold text-center mt-10">
-                          Book Now
-                        </h1>
-                        <form className="mt-10">
-                          <FloatingLabel
-                            variant="outlined"
-                            color="success"
-                            label=" Name"
-                            type="text"
-                            name="name"
-                            sizing="sm"
-                            className=""
-                            required
-                          />
-                          <FloatingLabel
-                            variant="outlined"
-                            color="success"
-                            label="Email"
-                            type="email"
-                            name="email"
-                            sizing="sm"
-                            required
-                            className=""
-                          />
-                          <FloatingLabel
-                            variant="outlined"
-                            color="success"
-                            label="Phone Number"
-                            type="number"
-                            name="number"
-                            sizing="sm"
-                            required
-                            className=""
-                          />
-                          <div className="max-w-md">
-                            <div className="mb-2 block"></div>
-                            <Textarea
-                              variant="outlined"
-                              color="success"
-                              id="comment"
-                              placeholder="Enter Tour Name"
-                              required
-                              rows={4}
-                            />
-                          </div>
-
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
-                            Submit Now
-                          </button>
-                        </form>
-                      </div>
-                    </div>
-                  </Modal>
-                </div>
-              </div>
-            </Card>
-          </div>
-
           <div>
             <Card
               className="max-w-sm mt-5"
@@ -554,89 +472,7 @@ function Tour() {
               imgSrc={Jodhpur}
             >
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-                Jodhpur
-              </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} />  For Two Nights
-              </p>
-              <div className="flex justify-evenly items-center">
-                <p>Read More</p>
-                <div>
-                  <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
-                    onClick={handleOpenModal}
-                  >
-                    Book Now
-                  </button>
-                  <Modal isOpen={isOpen} onClose={handleCloseModal}>
-                    <div className="flex justify-center items-center size-full">
-                      <div className="card-1">
-                        <h1 className="playfair text-6xl font-bold text-center mt-10">
-                          Book Now
-                        </h1>
-                        <form className="mt-10">
-                          <FloatingLabel
-                            variant="outlined"
-                            color="success"
-                            label=" Name"
-                            type="text"
-                            name="name"
-                            sizing="sm"
-                            className=""
-                            required
-                          />
-                          <FloatingLabel
-                            variant="outlined"
-                            color="success"
-                            label="Email"
-                            type="email"
-                            name="email"
-                            sizing="sm"
-                            required
-                            className=""
-                          />
-                          <FloatingLabel
-                            variant="outlined"
-                            color="success"
-                            label="Phone Number"
-                            type="number"
-                            name="number"
-                            sizing="sm"
-                            required
-                            className=""
-                          />
-                          <div className="max-w-md">
-                            <div className="mb-2 block"></div>
-                            <Textarea
-                              variant="outlined"
-                              color="success"
-                              id="comment"
-                              placeholder="Enter Tour Name"
-                              required
-                              rows={4}
-                            />
-                          </div>
-
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
-                            Submit Now
-                          </button>
-                        </form>
-                      </div>
-                    </div>
-                  </Modal>
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          <div>
-            <Card
-              className="max-w-sm mt-5"
-              imgAlt="Meaningful alt text for an image that is not purely decorative"
-              imgSrc={udaipur}
-            >
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-                Udaipur
+             Rajasthan Tour
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
               <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> For Six Nights and Seven Days
@@ -645,7 +481,7 @@ function Tour() {
                 <p>Read More</p>
                 <div>
                   <button
-                    className="bg-[#E18A2C] text-white p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -740,7 +576,7 @@ function Tour() {
                   
                   <div>
                     <button
-                      className="bg-[#E18A2C] text-white p-2 rounded-md"
+                      className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
                       onClick={handleOpenModal}
                     >
                       Book Now
