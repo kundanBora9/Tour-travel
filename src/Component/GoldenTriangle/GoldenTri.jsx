@@ -47,7 +47,8 @@ function GoldenTri() {
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg">
           <h1 className="text-6xl text-white playfair">Golden Triangle</h1>
-          <p className="text-center lato-regular text-3xl">4-night, 5-day </p>
+          <p className="text-center lato-regular text-3xl">Four Nights and Five Days
+          </p>
         </div>
       </div>
       <div className="flex flex-wrap justify-center mt-10 mx-5">
