@@ -7,7 +7,7 @@ import HumayunTOmb from "../../assets/humayuntomb.jpg";
 import Tajmahal from "../../assets/TajMahal.jpg";
 import Fatehpur from "../../assets/Fatehpur.jpeg";
 import HawaMahal from "../../assets/hawaMahal.jpg";
-import NagarFort from "../../assets/Nagarfort.jpg";
+import NagarFort from "../../assets/Mehrangarh.jpg";
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;

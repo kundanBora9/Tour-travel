@@ -530,7 +530,9 @@ function Home() {
               <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> For Six Nights and Seven Days
               </p>
               <div className="flex justify-evenly items-center">
-                <p>Read More</p>
+              <Link to="/rajeshtan">
+                  <p>Read More</p>
+                   </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
