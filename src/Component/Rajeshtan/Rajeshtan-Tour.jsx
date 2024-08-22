@@ -30,7 +30,7 @@ function Rajeshtan() {
             Day 1: Arrival in Jaipur
           </h1>
           <p className="font-normal text-gray-900 lato-bold">
-            Morning: Fly from Delhi to Jaipur and be met and transferred to your hotel.<br/>
+            Morning: Fly from Delhi to Jaipur and our representative meet you airport and transferred to your hotel.<br/>
             Afternoon: This tour has to include the visit to the City Palace and
             Jantar Mantar.<br/> Evening: Spend some time walking around the local
             markets and you can also get to taste some Rajasthani style of food
