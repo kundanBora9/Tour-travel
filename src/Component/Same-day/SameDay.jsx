@@ -2,7 +2,11 @@ import React from "react";
 import SamdayImg from "../../assets/samedaycover.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-
+import { FloatingLabel, Textarea, Label } from "flowbite-react";
+import TajImg from "../../assets/client-2.jpg";
+import Tajmahal from "../../assets/TajMahal.jpg";
+import AgraFort from "../../assets/Agrafort.jpg";
+import TajImg1 from "../../assets/TajImg2.jpg";
 function SameDay() {
   return (
     <div>
@@ -20,10 +24,34 @@ function SameDay() {
             </p>
           </div>
         </div>
-
         <div>
-          <div className="flex justify-items-stretch items-start ">
+          <div className="flex flex-wrap items-center justify-center mt-5">
+            <img
+              src={TajImg}
+              alt=""
+              className="h-full max-h-80 w-1/3 rounded-lg mb-4 hover:scale-105 hover:opacity-80 hover:bg-gray-200 transition duration-300 ease-in-out"
+            />
+            <img
+              src={Tajmahal}
+              alt=""
+              className="h-full max-h-80 w-1/3 rounded-lg mb-4 hover:scale-105 hover:opacity-80 hover:bg-gray-200 transition duration-300 ease-in-out"
+            />
+            <img
+              src={AgraFort}
+              alt=""
+              className="h-full max-h-80 w-1/3 rounded-lg mb-4 hover:scale-105 hover:opacity-80 hover:bg-gray-200 transition duration-300 ease-in-out"
+            />
+            <img
+              src={TajImg1}
+              alt=""
+              className="h-full max-h-80 w-1/3 rounded-lg mb-4 hover:scale-105 hover:opacity-80 hover:bg-gray-200 transition duration-300 ease-in-out"
+            />
+          </div>
+        </div>
+        <div>
+          <div className="flex flex-wrap justify-evenly items-center ">
             <div className="flex flex-col">
+              <h1 className="lato-bold text-4xl">Itinerary</h1>
               <span className="text-lg">
                 {" "}
                 <FontAwesomeIcon
@@ -103,30 +131,54 @@ function SameDay() {
                 5:30 PM: Begin your drive back to Delhi.
               </span>
             </div>
-            <div className="border-2">
-              <h1>Book Now</h1>
-              <form action="">
-                <label>Name</label>
-                <input type="text" placeholder="Name" className="w-1/2 p-3" />
-                <label>Email</label>
-                <input type="email" placeholder="Email" className="w-1/2 p-3" />
-                <label>Phone</label>
-                <input type="tel" placeholder="Phone" className="w-1/2 p-3" />
-                <label>Number of People</label>
-                <select className="w-1/2 p-3">
-                  <option value="">Select</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-                <button>Submit</button>
+            <div className="border-2 order-2 border-zinc-950 rounded-lg w-72 mt-5">
+              <h1 className="text-center lato-bold text-4xl">Book Now</h1>
+              <form className="p-5">
+                <FloatingLabel
+                  variant="outlined"
+                  color="success"
+                  label=" Name"
+                  type="text"
+                  name="name"
+                  sizing="sm"
+                  className=""
+                  required
+                />
+                <FloatingLabel
+                  variant="outlined"
+                  color="success"
+                  label="Email"
+                  type="email"
+                  name="email"
+                  sizing="sm"
+                  required
+                  className=""
+                />
+                <FloatingLabel
+                  variant="outlined"
+                  color="success"
+                  label="Phone Number"
+                  type="number"
+                  name="number"
+                  sizing="sm"
+                  required
+                  className=""
+                />
+                <div className="max-w-md">
+                  <div className="mb-2 block"></div>
+                  <Textarea
+                    variant="outlined"
+                    color="success"
+                    id="comment"
+                    placeholder="Enter Tour Name"
+                    required
+                    rows={4}
+                  />
+                </div>
+
+                <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                  Submit Now
+                </button>
               </form>
             </div>
           </div>
