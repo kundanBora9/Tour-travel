@@ -1,4 +1,5 @@
 import React, { useState } from 'react';  
+import { Link } from "react-router-dom";
 import { createPortal } from 'react-dom';
 import slider_1 from "../Hero/images/slider_1.jpg";
 import "./../../../src/App.css"
@@ -14,7 +15,6 @@ import Jodhpur from '../Hero/images/jodhpur.jpg'
 import udaipur from '../Hero/images/udaipur.jpg'
 import { Card } from "flowbite-react";
 import { FloatingLabel, Textarea, Label } from "flowbite-react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons"; 
 
@@ -58,6 +58,7 @@ function Tour() {
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc={GoldenTriangle}
           >
+             <Link to="/golden">
             <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
               Golden Triangle
             </h5>
@@ -65,6 +66,7 @@ function Tour() {
               Explore the majestic forts and palaces of Agra and Rajasthan and
               Delhi, Experience the rich history
             </p>
+            </Link>
           </Card>
           </Link>
           </div>
@@ -76,6 +78,7 @@ function Tour() {
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc={slider_2}
           >
+            <Link to="/rajeshtan">
             <h5 className="text-2xl playfair font-bold tracking-tight text-gray-900 dark:text-white">
             Rajasthan Tour
             </h5>
@@ -83,6 +86,7 @@ function Tour() {
               Experience the splendor of Rajasthan's magnificent palaces and
               forts while learning about its fascinating past.
             </p>
+            </Link>
           </Card>
           </Link>
          </div>
@@ -94,6 +98,7 @@ function Tour() {
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc={sameday}
           >
+            <Link to="/sameday">
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
               Same Day Tour
             </h5>
@@ -101,6 +106,7 @@ function Tour() {
               Experience a Same Day Tour of Rajasthan, Delhi, and Agra,
               exploring majestic forts, palaces, and rich history.
             </p>
+            </Link>
           </Card>
           </Link>
           </div>
@@ -121,6 +127,7 @@ function Tour() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_2}
             >
+              <Link to="/sameday">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Agra
               </h5>
@@ -130,8 +137,11 @@ function Tour() {
               <p className="font-normal text-gray-700 dark:text-gray-400">
               <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Taj Mahal/AgraFort......
               </p>
+              </Link>
               <div className="flex justify-evenly items-center">
+              <Link to="/sameday">
                 <p>Read More</p>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
@@ -206,6 +216,7 @@ function Tour() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_1}
             >
+              <Link to="/samedaytrain">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Agra
               </h5>
@@ -215,8 +226,11 @@ function Tour() {
               <p className="font-normal text-gray-700 dark:text-gray-400">
               <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Taj Mahal/AgraFort......
               </p>
+              </Link>
               <div className="flex justify-evenly items-center">
+              <Link to="/samedaytrain">
                 <p>Read More</p>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
@@ -291,17 +305,21 @@ function Tour() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_3}
             >
+              <Link to="/samedaycarjai">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Jaipur
               </h5>
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 By Car
               </h5>
+              </Link>
               <p className="font-normal text-gray-700 dark:text-gray-400">
               <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Amber Fort, City Palace, and Hawa Mahal
               </p>
               <div className="flex justify-evenly items-center">
+              <Link to="/samedaycarjai">
                 <p>Read More</p>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
@@ -376,6 +394,7 @@ function Tour() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_4}
             >
+               <Link to="/samedaytrainjai">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Jaipur
               </h5>
@@ -385,8 +404,11 @@ function Tour() {
               <p className="font-normal text-gray-700 dark:text-gray-400">
               <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Amber Fort, City Palace, and Hawa Mahal
               </p>
+              </Link>
               <div className="flex justify-evenly items-center">
+              <Link to="/samedaytrainjai">
                 <p>Read More</p>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
@@ -471,14 +493,18 @@ function Tour() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={Jodhpur}
             >
+              <Link to="/rajeshtan">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
              Rajasthan Tour
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
               <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> For Six Nights and Seven Days
               </p>
+              </Link>
               <div className="flex justify-evenly items-center">
+              <Link to="/rajeshtan">
                 <p>Read More</p>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
@@ -562,6 +588,7 @@ function Tour() {
                 imgAlt="Golden Tour Image"
                 imgSrc={slider_1}
               >
+                 <Link to="/golden">
                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                   Delhi Agra and Jaipur 
                 </h5>
@@ -569,6 +596,7 @@ function Tour() {
                 <p className="font-normal text-gray-700 lato-bold ">
                 <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> For Four Nights and Five Days
                 </p>
+                </Link>
                 <div className="flex justify-evenly items-center">
                 <Link to="/golden">
                   <p>Read More</p>

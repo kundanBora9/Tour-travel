@@ -1,3 +1,4 @@
+
 import React from "react";
 import SamdayImg from "../../assets/samedaycover.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +8,7 @@ import TajImg from "../../assets/client-2.jpg";
 import Tajmahal from "../../assets/TajMahal.jpg";
 import AgraFort from "../../assets/Agrafort.jpg";
 import TajImg1 from "../../assets/TajImg2.jpg";
-function SameDay() {
+function SameDayTrain() {
   return (
     <div>
       <div>
@@ -55,8 +56,8 @@ function SameDay() {
               <span className="text-lg">
                 {" "}
               
-                Early Morning Depart from Delhi. The drive to Agra takes around 3-4
-                hours.
+                Leave Delhi in the early morning. Take the train to Agra.
+
               </span>
               <span className="text-lg">
                 {" "}
@@ -94,7 +95,7 @@ function SameDay() {
               </span>
               <span className="text-lg">
                 {" "}
-               Begin your drive back to Delhi.
+                Begin your train trip back to Delhi.
               </span>
             </div>
             <div className="border-2 order-2 border-zinc-950 rounded-lg w-72 mt-5">
@@ -153,4 +154,4 @@ function SameDay() {
     </div>
   );
 }
-export default SameDay;
+export default SameDayTrain;

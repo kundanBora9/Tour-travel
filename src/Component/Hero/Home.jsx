@@ -11,9 +11,9 @@ import sameday_4 from "../Hero/images/sameday_4.jpeg";
 import Jaipur from ".//images/Jaipur.jpg";
 import Jodhpur from ".//images/jodhpur.jpg";
 import udaipur from ".//images/udaipur.jpg";
-import car_rental from './/images/car-rental.jpg'
-import Guide from './/images/guide.jpg'
-import Hotel from './/images/Hotel.jpg'
+import car_rental from ".//images/car-rental.jpg";
+import Guide from ".//images/guide.jpg";
+import Hotel from ".//images/Hotel.jpg";
 import { Carousel } from "flowbite-react";
 import { Card } from "flowbite-react";
 import { FloatingLabel, Textarea, Label } from "flowbite-react";
@@ -21,12 +21,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Client_img from "./images/client-1.jpg";
 import Client_img2 from "./images/client-2.jpg";
-import React, { useState } from "react";
+import { useState, useEffect } from 'react';
+import { useRef} from 'react';
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
@@ -85,15 +86,59 @@ function Home() {
   const handleCloseModal = () => {
     setIsOpen(false);
   };
+  const carouselRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animateText, setAnimateText] = useState(false);
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      const slider = carouselRef.current.querySelector('.carousel');
+      slider.addEventListener('slideChanged', () => {
+        setAnimateText(true);
+        setTimeout(() => {
+          setAnimateText(false);
+        }, 500);
+      });
+    }
+  }, [carouselRef]);
+
+
+  const slides = [
+    {
+      img: slider_1,
+      text: 'Timeless Taj Mahal - Golden Triangle Tour',
+    },
+    {
+      img: slider_2,
+      text: 'Royal Rajasthan - Hawa Mahal Awaits',
+    },
+    {
+      img: slider_4,
+      text: 'Historic Udaipur - Explore Now',
+    },
+  ];
   return (
     <>
-      <div className="h-56 sm:h-64 xl:h-screen 2xl:h-screen">
-        <Carousel pauseOnHover>
-          <img src={slider_1} alt="..." />
-          <img src={slider_2} alt="..." className="h-full" />
-          <img src={slider_4} alt="..." />
-        </Carousel>
-      </div>
+<div className="h-56 sm:h-64 xl:h-screen 2xl:h-screen relative">
+<Carousel ref={carouselRef} pauseOnHover>
+  {slides.map((slide, index) => (
+    <div key={index}>
+      <img src={slide.img} alt="..." />
+      <h1
+        className={`absolute bottom-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold playfair text-orange-500 ${
+          animateText && index === currentIndex ? 'animate-fade-in' : ''
+        }`}
+        style={{
+          backdropFilter: 'blur(2px)', // Add this line
+          WebkitBackdropFilter: 'blur(2px)', // Add this line for Safari support
+        }}
+      >
+        {slide.text}
+      </h1>
+    </div>
+  ))}
+</Carousel>
+    </div>
 
       {/* marquee */}
 
@@ -105,59 +150,58 @@ function Home() {
         </h1>
         <div className="flex justify-evenly flex-wrap items-center mt-10">
           <div>
-          <Link to="/golden">
-          <Card
-            className="max-w-sm"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={GoldenTriangle}
-          >
-            <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
-              Golden Triangle
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
-              Explore the majestic forts and palaces of Agra and Rajasthan and
-              Delhi, Experience the rich history
-            </p>
-          </Card>
-          </Link>
+            <Link to="/golden">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={GoldenTriangle}
+              >
+                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
+                  Golden Triangle
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                  Explore the majestic forts and palaces of Agra and Rajasthan
+                  and Delhi, Experience the rich history
+                </p>
+              </Card>
+            </Link>
           </div>
-
-         <div>
-         <Link to="/rajeshtan" className="">
-         <Card
-            className="max-w-sm"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={slider_2}
-          >
-            <h5 className="text-2xl playfair font-bold tracking-tight text-gray-900 dark:text-white">
-            Rajasthan Tour
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
-              Experience the splendor of Rajasthan's magnificent palaces and
-              forts while learning about its fascinating past.
-            </p>
-          </Card>
-          </Link>
-         </div>
 
           <div>
-          <Link to="/sameday">
-          <Card
-            className="max-w-sm"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={sameday}
-          >
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-              Same Day Tour
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
-              Experience a Same Day Tour of Rajasthan, Delhi, and Agra,
-              exploring majestic forts, palaces, and rich history.
-            </p>
-          </Card>
-          </Link>
+            <Link to="/rajeshtan" className="">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={slider_2}
+              >
+                <h5 className="text-2xl playfair font-bold tracking-tight text-gray-900 dark:text-white">
+                  Rajasthan Tour
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                  Experience the splendor of Rajasthan's magnificent palaces and
+                  forts while learning about its fascinating past.
+                </p>
+              </Card>
+            </Link>
           </div>
-          
+
+          <div>
+            <Link to="/sameday">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={sameday}
+              >
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+                  Same Day Tour
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                  Experience a Same Day Tour of Rajasthan, Delhi, and Agra,
+                  exploring majestic forts, palaces, and rich history.
+                </p>
+              </Card>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -174,6 +218,7 @@ function Home() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_2}
             >
+              <Link to="/sameday">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Agra
               </h5>
@@ -181,10 +226,17 @@ function Home() {
                 By Car
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Taj Mahal/AgraFort......
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                Taj Mahal/AgraFort......
               </p>
+              </Link>
               <div className="flex justify-evenly items-center">
+              <Link to="/sameday">
                 <p>Read More</p>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md "
@@ -259,6 +311,7 @@ function Home() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_1}
             >
+                 <Link to="/samedaytrain">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Agra
               </h5>
@@ -266,10 +319,17 @@ function Home() {
                 By Train
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Taj Mahal/AgraFort......
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                Taj Mahal/AgraFort......
               </p>
+              </Link>
               <div className="flex justify-evenly items-center">
+              <Link to="/samedaytrain">
                 <p>Read More</p>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
@@ -344,6 +404,7 @@ function Home() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_3}
             >
+              <Link to="/samedaycarjai">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Jaipur
               </h5>
@@ -351,10 +412,17 @@ function Home() {
                 By Car
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Amber Fort, City Palace, and Hawa Mahal
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                Amber Fort, City Palace, and Hawa Mahal
               </p>
+              </Link>
               <div className="flex justify-evenly items-center">
+              <Link to="/samedaycarjai">
                 <p>Read More</p>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
@@ -429,6 +497,7 @@ function Home() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_4}
             >
+                <Link to="/samedaytrainjai">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Jaipur
               </h5>
@@ -436,10 +505,17 @@ function Home() {
                 By Train
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Amber Fort, City Palace, and Hawa Mahal
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                Amber Fort, City Palace, and Hawa Mahal
               </p>
+              </Link>
               <div className="flex justify-evenly items-center">
+              <Link to="/samedaytrainjai">
                 <p>Read More</p>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
@@ -523,16 +599,22 @@ function Home() {
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={Jodhpur}
             >
+              <Link to="/rajeshtan">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-             Rajasthan Tour
+                Rajasthan Tour
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> For Six Nights and Seven Days
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                For Six Nights and Seven Days
               </p>
+              </Link>
               <div className="flex justify-evenly items-center">
-              <Link to="/rajeshtan">
+                <Link to="/rajeshtan">
                   <p>Read More</p>
-                   </Link>
+                </Link>
                 <div>
                   <button
                     className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
@@ -611,91 +693,95 @@ function Home() {
         </h1>
         <div className="flex justify-evenly flex-wrap items-center">
           <div>
-              <Card
-                className="max-w-sm mt-5"
-                imgAlt="Golden Tour Image"
-                imgSrc={slider_1}
-              >
-                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-                  Delhi Agra and Jaipur 
-                </h5>
-                
-                <p className="font-normal text-gray-700 lato-bold ">
-                <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> For Four Nights and Five Days
-                </p>
-                <div className="flex justify-evenly items-center">
+            <Card
+              className="max-w-sm mt-5"
+              imgAlt="Golden Tour Image"
+              imgSrc={slider_1}
+            >
+              <Link to="/golden">
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+                Delhi Agra and Jaipur
+              </h5>
+
+              <p className="font-normal text-gray-700 lato-bold ">
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                For Four Nights and Five Days
+              </p>
+              </Link>
+              <div className="flex justify-evenly items-center">
                 <Link to="/golden">
                   <p>Read More</p>
-                   </Link>
-                  
-                  <div>
-                    <button
-                      className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
-                      onClick={handleOpenModal}
-                    >
-                      Book Now
-                    </button>
-                    <Modal isOpen={isOpen} onClose={handleCloseModal}>
-                      <div className="flex justify-center items-center size-full">
-                        <div className="card-1">
-                          <h1 className="playfair text-6xl font-bold text-center mt-10">
-                            Book Now
-                          </h1>
-                          <form className="mt-10">
-                            <FloatingLabel
-                              variant="outlined"
-                              color="success"
-                              label=" Name"
-                              type="text"
-                              name="name"
-                              sizing="sm"
-                              className=""
-                              required
-                            />
-                            <FloatingLabel
-                              variant="outlined"
-                              color="success"
-                              label="Email"
-                              type="email"
-                              name="email"
-                              sizing="sm"
-                              required
-                              className=""
-                            />
-                            <FloatingLabel
-                              variant="outlined"
-                              color="success"
-                              label="Phone Number"
-                              type="number"
-                              name="number"
-                              sizing="sm"
-                              required
-                              className=""
-                            />
-                            <div className="max-w-md">
-                              <div className="mb-2 block"></div>
-                              <Textarea
-                                variant="outlined"
-                                color="success"
-                                id="comment"
-                                placeholder="Enter Tour Name"
-                                required
-                                rows={4}
-                              />
-                            </div>
+                </Link>
 
-                            <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
-                              Submit Now
-                            </button>
-                          </form>
-                        </div>
+                <div>
+                  <button
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
+                    onClick={handleOpenModal}
+                  >
+                    Book Now
+                  </button>
+                  <Modal isOpen={isOpen} onClose={handleCloseModal}>
+                    <div className="flex justify-center items-center size-full">
+                      <div className="card-1">
+                        <h1 className="playfair text-6xl font-bold text-center mt-10">
+                          Book Now
+                        </h1>
+                        <form className="mt-10">
+                          <FloatingLabel
+                            variant="outlined"
+                            color="success"
+                            label=" Name"
+                            type="text"
+                            name="name"
+                            sizing="sm"
+                            className=""
+                            required
+                          />
+                          <FloatingLabel
+                            variant="outlined"
+                            color="success"
+                            label="Email"
+                            type="email"
+                            name="email"
+                            sizing="sm"
+                            required
+                            className=""
+                          />
+                          <FloatingLabel
+                            variant="outlined"
+                            color="success"
+                            label="Phone Number"
+                            type="number"
+                            name="number"
+                            sizing="sm"
+                            required
+                            className=""
+                          />
+                          <div className="max-w-md">
+                            <div className="mb-2 block"></div>
+                            <Textarea
+                              variant="outlined"
+                              color="success"
+                              id="comment"
+                              placeholder="Enter Tour Name"
+                              required
+                              rows={4}
+                            />
+                          </div>
+
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                            Submit Now
+                          </button>
+                        </form>
                       </div>
-                    </Modal>
-                  </div>
+                    </div>
+                  </Modal>
                 </div>
-              </Card>
-             
-            
+              </div>
+            </Card>
           </div>
         </div>
       </div>
@@ -708,44 +794,48 @@ function Home() {
         </h1>
         <div className="flex flex-wrap justify-evenly items-center mt-10">
           <div className="Car Rental">
-          <Card
-            className="max-w-sm mt-5"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={car_rental}
-          >
-            <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
-              Rental Car
-            </h5>
-            <p className="font-normal text-gray-700 lato-bold">You can Book cabs or taxi in Agra for full day sightseeings.</p>
-          </Card>
+            <Card
+              className="max-w-sm mt-5"
+              imgAlt="Meaningful alt text for an image that is not purely decorative"
+              imgSrc={car_rental}
+            >
+              <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
+                Rental Car
+              </h5>
+              <p className="font-normal text-gray-700 lato-bold">
+                You can Book cabs or taxi in Agra for full day sightseeings.
+              </p>
+            </Card>
           </div>
           <div className="Tour-guide">
-          <Card
-            className="max-w-sm mt-5"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={Guide}
-          >
-            <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
-              Tour Guide
-            </h5>
-            <p className="font-normal text-gray-700 lato-bold">Book your local private tour guide & explore beautiful cities in India.</p>
-          </Card>
+            <Card
+              className="max-w-sm mt-5"
+              imgAlt="Meaningful alt text for an image that is not purely decorative"
+              imgSrc={Guide}
+            >
+              <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
+                Tour Guide
+              </h5>
+              <p className="font-normal text-gray-700 lato-bold">
+                Book your local private tour guide & explore beautiful cities in
+                India.
+              </p>
+            </Card>
           </div>
           <div className="Hotel">
-          <Card
-            className="max-w-sm mt-5"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={Hotel}
-          >
-            <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
-              Hotels
-            </h5>
-            <p className="font-normal text-gray-700 lato-bold">
-            Book budget and luxury hotels at best price from us.
-            </p>
-          </Card>
+            <Card
+              className="max-w-sm mt-5"
+              imgAlt="Meaningful alt text for an image that is not purely decorative"
+              imgSrc={Hotel}
+            >
+              <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
+                Hotels
+              </h5>
+              <p className="font-normal text-gray-700 lato-bold">
+                Book budget and luxury hotels at best price from us.
+              </p>
+            </Card>
           </div>
-          
         </div>
       </div>
 
