@@ -125,7 +125,7 @@ function Home() {
     <div key={index}>
       <img src={slide.img} alt="..." />
       <h1
-        className={`absolute bottom-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold playfair text-orange-500 ${
+        className={`absolute bottom-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold playfair text-black ${
           animateText && index === currentIndex ? 'animate-fade-in' : ''
         }`}
         style={{
