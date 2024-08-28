@@ -1,9 +1,48 @@
 import React from "react";
 import { FloatingLabel, Textarea, Label } from "flowbite-react";
+import CityPalace from '../../assets/citypalace.jpg';
+import Hawamahal from '../../assets/hawaMahal.jpg';
+import JalMahal from '../../assets/jalmahal.jpg';
+import AmberFort from'../../assets/AmberFort.jpg';
+import Jaipur from '../../assets/Jaipur.jpeg'
 function samedayCarJai() {
   return (
     <div>
-      <div></div>
+       <div className="relative">
+        <img
+          src={Jaipur}
+          alt="Rajasthan"
+          className="h-72 w-full  brightness-50"
+        />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-lg">
+          <h1 className="text-5xl text-white playfair">Discover Jaipur in a Day</h1>
+          <p className="text-center lato-regular text-3xl">
+          Same-Day Tour from Delhi
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-wrap items-center justify-center mt-5">
+            <img
+              src={CityPalace}
+              alt=""
+              className="h-full max-h-80 w-1/3 rounded-lg mb-4 hover:scale-105 hover:opacity-80 hover:bg-gray-200 transition duration-300 ease-in-out"
+            />
+            <img
+              src={Hawamahal}
+              alt=""
+              className="h-full max-h-80 w-1/3 rounded-lg mb-4 hover:scale-105 hover:opacity-80 hover:bg-gray-200 transition duration-300 ease-in-out"
+            />
+            <img
+              src={JalMahal}
+              alt=""
+              className="h-full max-h-80 w-1/3 rounded-lg mb-4 hover:scale-105 hover:opacity-80 hover:bg-gray-200 transition duration-300 ease-in-out"
+            />
+            <img
+              src={AmberFort}
+              alt=""
+              className="h-full max-h-80 w-1/3 rounded-lg mb-4 hover:scale-105 hover:opacity-80 hover:bg-gray-200 transition duration-300 ease-in-out"
+            />
+          </div>
       <div className="flex flex-wrap justify-evenly items-center ">
       <div className="flex flex-col">
         <h1 className="lato-bold text-4xl">Itinerary</h1>

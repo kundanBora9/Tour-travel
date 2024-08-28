@@ -28,6 +28,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import AOS from "aos";
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
@@ -37,7 +38,7 @@ const Modal = ({ isOpen, onClose, children }) => {
       <div className="bg-white p-4 rounded-md">
         {children}
         <button
-          className="bg-red-500 text-white p-2 rounded-md"
+          className="bg-red-500 text-white p-2 rounded-md mt-10"
           onClick={onClose}
         >
           Close
@@ -114,9 +115,12 @@ function Home() {
     },
     {
       img: slider_4,
-      text: 'Historic Udaipur - Explore Now',
+      text: 'Historic Humayun’s Tomb - Explore Now',
     },
   ];
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
 <div className="h-56 sm:h-64 xl:h-screen 2xl:h-screen relative">
@@ -145,11 +149,13 @@ function Home() {
       {/* tours */}
 
       <div>
-        <h1 className="text-6xl font-bold text-center mt-10 playfair">
+        <h1 data-aos="fade-up"
+     data-aos-duration="3000" className="text-6xl font-bold text-center mt-10 playfair">
           Discover the Majesty of Agra, Delhi and Rajasthan
         </h1>
-        <div className="flex justify-evenly flex-wrap items-center mt-10">
-          <div>
+        <div data-aos="fade-up"
+     data-aos-duration="3000" className="flex justify-evenly flex-wrap items-center mt-10">
+          <div className="card-1">
             <Link to="/golden">
               <Card
                 className="max-w-sm"
@@ -167,7 +173,8 @@ function Home() {
             </Link>
           </div>
 
-          <div>
+          <div data-aos="fade-up"
+     data-aos-duration="3000" className="card-1">
             <Link to="/rajeshtan" className="">
               <Card
                 className="max-w-sm"
@@ -185,7 +192,8 @@ function Home() {
             </Link>
           </div>
 
-          <div>
+          <div data-aos="fade-up"
+     data-aos-duration="3000" className="card-1">
             <Link to="/sameday">
               <Card
                 className="max-w-sm"
@@ -208,10 +216,12 @@ function Home() {
       {/* same day tour */}
 
       <div>
-        <h1 className=" font-bold text-center mt-10 playfair text-6xl">
+        <h1 data-aos="fade-up"
+     data-aos-duration="3000" className=" font-bold text-center mt-10 playfair text-6xl">
           Same Day Tour
         </h1>
-        <div className="flex justify-evenly flex-wrap items-center mt-10">
+        <div data-aos="fade-up"
+     data-aos-duration="3000" className="flex justify-evenly flex-wrap items-center mt-10">
           <div className="card-1">
             <Card
               className="max-w-sm"
@@ -294,7 +304,7 @@ function Home() {
                           </div>
 
                           <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
-                            Submit Now
+                            Submit
                           </button>
                         </form>
                       </div>
@@ -593,9 +603,9 @@ function Home() {
           Rajasthan Tour
         </h1>
         <div className="flex justify-evenly flex-wrap items-center">
-          <div>
+          <div className="">
             <Card
-              className="max-w-sm mt-5"
+              className="max-w-sm mt-5 card-1"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={Jodhpur}
             >
@@ -688,11 +698,11 @@ function Home() {
       {/* Golden Tour */}
 
       <div>
-        <h1 className="playfair text-6xl font-bold text-center mt-10">
+        <h1 className="playfair text-6xl font-bold text-center mt-10 ">
           Golden Triangle Tour
         </h1>
         <div className="flex justify-evenly flex-wrap items-center">
-          <div>
+          <div className="card-1">
             <Card
               className="max-w-sm mt-5"
               imgAlt="Golden Tour Image"
@@ -788,12 +798,12 @@ function Home() {
 
       {/* what we offer */}
 
-      <div>
+      <div className="">
         <h1 className="playfair text-6xl font-bold text-center mt-10">
           What we offer
         </h1>
         <div className="flex flex-wrap justify-evenly items-center mt-10">
-          <div className="Car Rental">
+          <div className="Car Rental card-1">
             <Card
               className="max-w-sm mt-5"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
@@ -807,7 +817,7 @@ function Home() {
               </p>
             </Card>
           </div>
-          <div className="Tour-guide">
+          <div className="Tour-guide card-1">
             <Card
               className="max-w-sm mt-5"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
@@ -822,7 +832,7 @@ function Home() {
               </p>
             </Card>
           </div>
-          <div className="Hotel">
+          <div className="Hotel card-1">
             <Card
               className="max-w-sm mt-5"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
