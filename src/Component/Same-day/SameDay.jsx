@@ -1,4 +1,5 @@
 import React from "react";
+import '../../App.css'
 import SamdayImg from "../../assets/samedaycover.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +9,7 @@ import Tajmahal from "../../assets/TajMahal.jpg";
 import AgraFort from "../../assets/Agrafort.jpg";
 import TajImg1 from "../../assets/TajImg2.jpg";
 function SameDay() {
+  const texts = ["Delhi", "Taj Mahal", "Agra Fort", "Mehtab Bagh"];
   return (
     <div>
       <div>
@@ -49,53 +51,73 @@ function SameDay() {
           </div>
         </div>
         <div>
+          <div className="flex justify-evenly items-center gap-3 relative" >
+            <div
+              className="absolute w-full h-1 bg-gray-900 dashed-line"
+              style={{ top: "50%", transform: "translateY(-50%)" }}
+            ></div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Delhi
+              </div>
+            </div>
+            <div className="relative w-20 h-20  rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Taj Mahal
+              </div>
+            </div>
+            <div className="relative w-20 h-20  rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Agra Fort
+              </div>
+            </div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Mehtab Bagh
+              </div>
+            </div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Delhi
+              </div>
+            </div>
+          </div>
           <div className="flex flex-wrap justify-evenly items-center ">
             <div className="flex flex-col">
               <h1 className="lato-bold text-4xl">Itinerary</h1>
               <span className="text-lg">
                 {" "}
-              
-                Early Morning Depart from Delhi. The drive to Agra takes around 3-4
-                hours.
+                Early Morning Depart from Delhi. The drive to Agra takes around
+                3-4 hours.
               </span>
               <span className="text-lg">
                 {" "}
-                
                 Arrive in Agra and meet your tour guide.
               </span>
               <span className="text-lg">
                 {" "}
-              
-                 Visit the Taj Mahal. Enjoy the guided tour of this
-                iconic monument.
+                Visit the Taj Mahal. Enjoy the guided tour of this iconic
+                monument.
               </span>
               <span className="text-lg">
                 {" "}
-               
-                Head to the Agra Fort for a tour of this historic
-                site.
+                Head to the Agra Fort for a tour of this historic site.
               </span>
               <span className="text-lg">
                 {" "}
-                
-                 Enjoy lunch at a local restaurant with recommendations
-                from your guide.
+                Enjoy lunch at a local restaurant with recommendations from your
+                guide.
               </span>
               <span className="text-lg">
                 {" "}
-              
-               Visit Mehtab Bagh for a beautiful view of the Taj Mahal
-                from across the river.
+                Visit Mehtab Bagh for a beautiful view of the Taj Mahal from
+                across the river.
               </span>
               <span className="text-lg">
                 {" "}
-               
-                 Free time for shopping or exploring a local market.
+                Free time for shopping or exploring a local market.
               </span>
-              <span className="text-lg">
-                {" "}
-               Begin your drive back to Delhi.
-              </span>
+              <span className="text-lg"> Begin your drive back to Delhi.</span>
             </div>
             <div className="border-2 order-2 border-zinc-950 rounded-lg w-72 mt-5">
               <h1 className="text-center lato-bold text-4xl">Book Now</h1>

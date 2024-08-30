@@ -90,3 +90,6 @@
 .card-1,.card,.card-2, .card-3, .card-4 {
   transition: transform 0.3s ease-in-out;
 }
+.dashed-line{
+  border: '2px dashed'
+}

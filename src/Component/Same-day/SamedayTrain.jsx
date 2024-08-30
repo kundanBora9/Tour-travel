@@ -49,6 +49,37 @@ function SameDayTrain() {
             />
           </div>
         </div>
+        <div className="flex justify-evenly items-center gap-3 relative" >
+            <div
+              className="absolute w-full h-1 bg-gray-900 dashed-line"
+              style={{ top: "50%", transform: "translateY(-50%)" }}
+            ></div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Delhi
+              </div>
+            </div>
+            <div className="relative w-20 h-20  rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Taj Mahal
+              </div>
+            </div>
+            <div className="relative w-20 h-20  rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Agra Fort
+              </div>
+            </div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Mehtab Bagh
+              </div>
+            </div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Delhi
+              </div>
+            </div>
+          </div>
         <div>
           <div className="flex flex-wrap justify-evenly items-center ">
             <div className="flex flex-col">

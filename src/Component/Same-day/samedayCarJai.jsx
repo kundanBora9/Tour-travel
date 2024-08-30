@@ -43,6 +43,47 @@ function samedayCarJai() {
               className="h-full max-h-80 w-1/3 rounded-lg mb-4 hover:scale-105 hover:opacity-80 hover:bg-gray-200 transition duration-300 ease-in-out"
             />
           </div>
+          <div className="flex justify-evenly items-center gap-3 relative" >
+            <div
+              className="absolute w-full h-1 bg-gray-900 dashed-line"
+              style={{ top: "50%", transform: "translateY(-50%)" }}
+            ></div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Delhi
+              </div>
+            </div>
+            <div className="relative w-20 h-20  rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Amber Fort
+              </div>
+            </div>
+            <div className="relative w-20 h-20  rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              Jal Mahal
+              </div>
+            </div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                Hawa Mahal
+              </div>
+            </div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              City Palace
+              </div>
+            </div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              Jantar Mantar
+              </div>
+            </div>
+            <div className="relative w-20 h-20 rounded-full bg-black border-black">
+              <div className="absolute text-center text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              Delhi
+              </div>
+            </div>
+          </div>
       <div className="flex flex-wrap justify-evenly items-center ">
       <div className="flex flex-col">
         <h1 className="lato-bold text-4xl">Itinerary</h1>
