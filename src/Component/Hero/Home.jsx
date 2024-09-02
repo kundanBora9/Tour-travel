@@ -14,6 +14,7 @@ import udaipur from ".//images/udaipur.jpg";
 import car_rental from ".//images/car-rental.jpg";
 import Guide from ".//images/guide.jpg";
 import Hotel from ".//images/Hotel.jpg";
+import Whatsapp from ".//images/Whatsapp.png"
 import { Carousel } from "flowbite-react";
 import { Card } from "flowbite-react";
 import { FloatingLabel, Textarea, Label } from "flowbite-react";
@@ -128,7 +129,8 @@ function Home() {
   ];
   return (
     <>
-<div className="h-56 sm:h-64 xl:h-screen 2xl:h-screen relative">
+    <div>
+    <div className="h-56 sm:h-64 xl:h-screen 2xl:h-screen relative">
 <Carousel ref={carouselRef} pauseOnHover>
   {slides.map((slide, index) => (
     <div key={index}>
@@ -138,8 +140,8 @@ function Home() {
           animateText && index === currentIndex ? 'animate-fade-in' : ''
         }`}
         style={{
-          backdropFilter: 'blur(2px)', // Add this line
-          WebkitBackdropFilter: 'blur(2px)', // Add this line for Safari support
+          backdropFilter: 'blur(2px)', 
+          WebkitBackdropFilter: 'blur(2px)', 
         }}
       >
         {slide.text}
@@ -148,6 +150,15 @@ function Home() {
   ))}
 </Carousel>
     </div>
+    </div>
+  {/* Whatsapp */}
+
+  <div className="fixed right-10 bottom-5 p-3" style={{zIndex:"99",}}>
+      <a href="https://wa.me/919760402549?text=Hello How Cai I help You ?" target="_blank">
+        <img src={Whatsapp} alt="Whatsapp" className="w-16 lg:w-20" />
+      </a>
+    </div>
+
 
       {/* marquee */}
       <div className="flex justify-center items-center  bg-orange-500  mt-5 overflow-hidden">
