@@ -31,6 +31,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import 'aos/dist/aos.css'
+import Video from "../../assets/Video.mp4"
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
@@ -96,61 +97,16 @@ function Home() {
   const handleCloseModal = () => {
     setIsOpen(false);
   };
-  const carouselRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [animateText, setAnimateText] = useState(false);
-
-  useEffect(() => {
-    if (carouselRef.current) {
-      const slider = carouselRef.current.querySelector('.carousel');
-      slider.addEventListener('slideChanged', () => {
-        setAnimateText(true);
-        setTimeout(() => {
-          setAnimateText(false);
-        }, 500);
-      });
-    }
-  }, [carouselRef]);
-
-
-  const slides = [
-    {
-      img: slider_1,
-      text: 'Timeless Taj Mahal - Golden Triangle Tour',
-    },
-    {
-      img: slider_2,
-      text: 'Royal Rajasthan - Hawa Mahal Awaits',
-    },
-    {
-      img: slider_4,
-      text: 'Historic Humayun’s Tomb - Explore Now',
-    },
-  ];
   return (
     <>
-    <div>
-    <div className="h-56 sm:h-64 xl:h-screen 2xl:h-screen relative">
-<Carousel ref={carouselRef} pauseOnHover>
-  {slides.map((slide, index) => (
-    <div key={index}>
-      <img src={slide.img} alt="..." />
-      <h1
-        className={`absolute bottom-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold playfair text-black ${
-          animateText && index === currentIndex ? 'animate-fade-in' : ''
-        }`}
-        style={{
-          backdropFilter: 'blur(2px)', 
-          WebkitBackdropFilter: 'blur(2px)', 
-        }}
-      >
-        {slide.text}
-      </h1>
-    </div>
-  ))}
-</Carousel>
-    </div>
-    </div>
+    <div className="relative">
+  <video src={Video} loop muted autoPlay className="w-full h-full object-cover" />
+  <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+    <h1 className="text-white text-3xl lg:text-6xl  playfair ">
+      Explore India's Timeless Beauty
+    </h1>
+  </div>
+</div>
   {/* Whatsapp */}
 
   <div className="fixed right-10 bottom-5 p-3" style={{zIndex:"99",}}>
