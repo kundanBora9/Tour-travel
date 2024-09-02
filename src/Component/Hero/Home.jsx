@@ -29,6 +29,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
+import 'aos/dist/aos.css'
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
@@ -80,6 +81,13 @@ const onSubmit = async (event) => {
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect((
+    () => {
+      AOS.init();
+    }
+  ),[])
+
+
   const handleOpenModal = () => {
     setIsOpen(true);
   };
@@ -118,9 +126,6 @@ function Home() {
       text: 'Historic Humayun’s Tomb - Explore Now',
     },
   ];
-  useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <>
 <div className="h-56 sm:h-64 xl:h-screen 2xl:h-screen relative">
@@ -145,7 +150,24 @@ function Home() {
     </div>
 
       {/* marquee */}
-
+      <div className="flex justify-center items-center  bg-orange-500  mt-5 overflow-hidden">
+      <motion.div
+        initial={{ x: 1000 }}
+        animate={{ x: -1000 }}
+        transition={{ duration: 20, repeat: Infinity }}
+        className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
+      >
+       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/1234567890">+1234567890</a></p>
+      </motion.div>
+      <motion.div
+        initial={{ x: 1000 }}
+        animate={{ x: -1000 }}
+        transition={{ duration: 20, repeat: Infinity,delay:3}}
+        className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
+      >
+       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/1234567890">+1234567890</a></p>
+      </motion.div>
+    </div>
       {/* tours */}
 
       <div>
@@ -155,7 +177,8 @@ function Home() {
         </h1>
         <div data-aos="fade-up"
      data-aos-duration="3000" className="flex justify-evenly flex-wrap items-center mt-10">
-          <div className="card-1">
+          <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" className="card-1">
             <Link to="/golden">
               <Card
                 className="max-w-sm"
@@ -216,13 +239,17 @@ function Home() {
       {/* same day tour */}
 
       <div>
-        <h1 data-aos="fade-up"
-     data-aos-duration="3000" className=" font-bold text-center mt-10 playfair text-6xl">
+        <h1 data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" className=" font-bold text-center mt-10 playfair text-6xl">
           Same Day Tour
         </h1>
-        <div data-aos="fade-up"
-     data-aos-duration="3000" className="flex justify-evenly flex-wrap items-center mt-10">
-          <div className="card-1">
+        <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" className="flex justify-evenly flex-wrap items-center mt-10">
+          <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" className="card-1">
             <Card
               className="max-w-sm"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
@@ -315,7 +342,9 @@ function Home() {
             </Card>
           </div>
 
-          <div className="card-2">
+          <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" className="card-2">
             <Card
               className="max-w-sm"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
@@ -408,7 +437,9 @@ function Home() {
             </Card>
           </div>
 
-          <div className="card-3">
+          <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" className="card-3">
             <Card
               className="max-w-sm"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
@@ -501,7 +532,9 @@ function Home() {
             </Card>
           </div>
 
-          <div className="card-4">
+          <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" className="card-4">
             <Card
               className="max-w-sm mt-5"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
@@ -598,7 +631,8 @@ function Home() {
 
       {/* Rajesthan Tour */}
 
-      <div>
+      <div data-aos="fade-up"
+     data-aos-duration="3000">
         <h1 className=" font-bold text-center mt-10 playfair text-6xl">
           Rajasthan Tour
         </h1>
@@ -697,7 +731,8 @@ function Home() {
 
       {/* Golden Tour */}
 
-      <div>
+      <div  data-aos="fade-up"
+     data-aos-duration="3000">
         <h1 className="playfair text-6xl font-bold text-center mt-10 ">
           Golden Triangle Tour
         </h1>
@@ -798,7 +833,7 @@ function Home() {
 
       {/* what we offer */}
 
-      <div className="">
+      <div data-aos="zoom-in-left" className="">
         <h1 className="playfair text-6xl font-bold text-center mt-10">
           What we offer
         </h1>
@@ -850,7 +885,7 @@ function Home() {
       </div>
 
       {/* What Our Clients Say */}
-      <div>
+      <div >
         <h1 className="playfair text-6xl font-bold text-center mt-10">
           What Our Clients Say
         </h1>
@@ -900,7 +935,7 @@ function Home() {
 
       {/* Start your Journey */}
 
-      <div className="flex justify-center items-center size-full">
+      <div data-aos="zoom-out-down" className="flex justify-center items-center size-full">
         <div>
           <h1 className="playfair text-6xl font-bold text-center mt-10">
             Start Your Journey
