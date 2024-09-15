@@ -14,8 +14,9 @@ function Header() {
     setShowModal(false);
   };
   return (
-    <Navbar fluid rounded className="bg-[#0C6A88] playfair">
+    <Navbar fluid rounded className="bg-[#001f3f] playfair">
       <Navbar.Brand href="/">
+      <img src={logo} alt="Saffron Routes"  className="w-28"/>
       </Navbar.Brand>
       <div className="flex md:order-2">
         <Button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-2 rounded" onClick={handleBookNowClick}>

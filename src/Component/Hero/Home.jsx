@@ -138,10 +138,10 @@ function Home() {
       {/* tours */}
 
       <div>
-        <h1 data-aos="fade-up"
+        <h2 data-aos="fade-up"
      data-aos-duration="3000" className="text-6xl font-bold text-center mt-10 playfair">
           Discover the Majesty of Agra, Delhi and Rajasthan
-        </h1>
+        </h2>
         <div data-aos="fade-up"
      data-aos-duration="3000" className="flex justify-evenly flex-wrap items-center mt-10">
           <div data-aos="fade-up"
@@ -206,11 +206,11 @@ function Home() {
       {/* same day tour */}
 
       <div>
-        <h1 data-aos="fade-down"
+        <h2 data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500" className=" font-bold text-center mt-10 playfair text-6xl">
           Same Day Tour
-        </h1>
+        </h2>
         <div data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500" className="flex justify-evenly flex-wrap items-center mt-10">
@@ -600,9 +600,9 @@ function Home() {
 
       <div data-aos="fade-up"
      data-aos-duration="3000">
-        <h1 className=" font-bold text-center mt-10 playfair text-6xl">
+        <h2 className=" font-bold text-center mt-10 playfair text-6xl">
           Rajasthan Tour
-        </h1>
+        </h2>
         <div className="flex justify-evenly flex-wrap items-center">
           <div className="">
             <Card
@@ -700,9 +700,9 @@ function Home() {
 
       <div  data-aos="fade-up"
      data-aos-duration="3000">
-        <h1 className="playfair text-6xl font-bold text-center mt-10 ">
+        <h2 className="playfair text-6xl font-bold text-center mt-10 ">
           Golden Triangle Tour
-        </h1>
+        </h2>
         <div className="flex justify-evenly flex-wrap items-center">
           <div className="card-1">
             <Card
@@ -801,9 +801,9 @@ function Home() {
       {/* what we offer */}
 
       <div data-aos="zoom-in-left" className="">
-        <h1 className="playfair text-6xl font-bold text-center mt-10">
+        <h2 className="playfair text-6xl font-bold text-center mt-10">
           What we offer
-        </h1>
+        </h2>
         <div className="flex flex-wrap justify-evenly items-center mt-10">
           <div className="Car Rental card-1">
             <Card
@@ -853,9 +853,9 @@ function Home() {
 
       {/* What Our Clients Say */}
       <div >
-        <h1 className="playfair text-6xl font-bold text-center mt-10">
+        <h2 className="playfair text-6xl font-bold text-center mt-10">
           What Our Clients Say
-        </h1>
+        </h2>
         <div className="flex flex-wrap justify-center items-center mt-10">
           <Swiper
             spaceBetween={50}
@@ -904,9 +904,9 @@ function Home() {
 
       <div data-aos="zoom-out-down" className="flex justify-center items-center size-full">
         <div>
-          <h1 className="playfair text-6xl font-bold text-center mt-10">
+          <h2 className="playfair text-6xl font-bold text-center mt-10">
             Start Your Journey
-          </h1>
+          </h2>
           <form className="mt-10">
             <FloatingLabel
               variant="outlined"

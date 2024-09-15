@@ -4,7 +4,7 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import {faEnvelope } from "@fortawesome/free-solid-svg-icons"; 
 function Footer() {
   return (
-    <div className='flex flex-wrap justify-evenly items center mt-10 bg-[#333333] text-[#F0F0F0]'>
+    <div className='flex flex-wrap justify-evenly items center mt-10 bg-[#001f3f] text-[#F0F0F0]'>
       <div>
         Logo
       </div>
