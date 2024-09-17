@@ -140,50 +140,7 @@ function Home() {
     </div>
 
 
-       {/* Internatiol  */}
-
-          <div>
-          <h2 data-aos="fade-up"
-     data-aos-duration="2000" className="text-6xl font-bold text-center mt-10 playfair">
-       Nepal & Bhutan: A Journey to the Himalayas
-        </h2>
-        <div className="flex justify-evenly items-center mt-5">
-        <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" className="card-1">
-            <Link to="/golden">
-              <Card
-                className="max-w-sm"
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc={Nepal}
-              >
-                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
-                  Nepal Tours
-                </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
-                "Nepal: A land of breathtaking landscapes, rich culture, and the majestic Himalayas, offering adventure and serenity in equal measure."
-                </p>
-              </Card>
-            </Link>
-          </div>
-          <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" className="card-1">
-            <Link to="/golden">
-              <Card
-                className="max-w-sm"
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc={Bhutan}
-              >
-                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
-                  Bhutan Tours
-                </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
-                "Bhutan: The Land of the Thunder Dragon, where ancient traditions meet stunning natural beauty in the heart of the Himalayas."
-                </p>
-              </Card>
-            </Link>
-          </div>
-        </div>
-          </div>
+      
 
       {/* tours */}
 
@@ -950,7 +907,50 @@ Goa: Sun, sand, and vibrant culture in a tropical paradise
           </div>
         </div>
       </div>
+ {/* Internatiol  */}
 
+ <div>
+          <h2 data-aos="fade-up"
+     data-aos-duration="2000" className="text-6xl font-bold text-center mt-10 playfair">
+       Nepal & Bhutan: A Journey to the Himalayas
+        </h2>
+        <div className="flex justify-evenly flex-wrap items-center mt-5">
+        <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" className="card-1">
+            <Link to="/golden">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={Nepal}
+              >
+                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
+                  Nepal Tours
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                "Nepal: A land of breathtaking landscapes, rich culture, and the majestic Himalayas, offering adventure and serenity in equal measure."
+                </p>
+              </Card>
+            </Link>
+          </div>
+          <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" className="card-1">
+            <Link to="/golden">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={Bhutan}
+              >
+                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
+                  Bhutan Tours
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                "Bhutan: The Land of the Thunder Dragon, where ancient traditions meet stunning natural beauty in the heart of the Himalayas."
+                </p>
+              </Card>
+            </Link>
+          </div>
+        </div>
+          </div>
 
 
       {/* what we offer */}
