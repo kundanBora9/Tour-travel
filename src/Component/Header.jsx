@@ -14,7 +14,7 @@ function Header() {
     setShowModal(false);
   };
   return (
-    <Navbar fluid rounded className="bg-[#001f3f] playfair">
+    <Navbar fluid rounded className="bg-[#001F3F] playfair">
       <Navbar.Brand href="/">
       <img src={logo} alt="Saffron Routes"  className="w-28"/>
       </Navbar.Brand>
