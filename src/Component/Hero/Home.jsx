@@ -820,7 +820,7 @@ function Home() {
               imgAlt="Golden Tour Image"
               imgSrc={Goa}
             >
-              <Link to="/golden">
+              <Link to="/goa">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
               Goa Tours
               </h5>
@@ -834,7 +834,7 @@ function Home() {
               </p>
               </Link>
               <div className="flex justify-evenly items-center">
-                <Link to="/golden">
+                <Link to="/goa">
                   <p>Read More</p>
                 </Link>
 
@@ -917,7 +917,7 @@ function Home() {
         <div className="flex justify-evenly flex-wrap items-center mt-5">
         <div data-aos="fade-up"
      data-aos-anchor-placement="top-bottom" className="card-1">
-            <Link to="/golden">
+            <Link to="/nepal">
               <Card
                 className="max-w-sm"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
@@ -934,7 +934,7 @@ function Home() {
           </div>
           <div data-aos="fade-up"
      data-aos-anchor-placement="top-bottom" className="card-1">
-            <Link to="/golden">
+            <Link to="/bhutan">
               <Card
                 className="max-w-sm"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"

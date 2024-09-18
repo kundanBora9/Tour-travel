@@ -11,6 +11,9 @@ import SameDay from './Component/Same-day/SameDay';
 import SameDayTrain from './Component/Same-day/SamedayTrain.jsx';
 import SameDayTrainJai from './Component/Same-day/samedayTrainJai.jsx';
 import SameDayCarJai from './Component/Same-day/samedayCarJai.jsx';
+import Goa from './Component/Goa/Goa.jsx'
+import Nepal from './Component/Nepal/NepalTours.jsx'
+import Bhutan from './Component/Bhuan Tours/BhutanTours.jsx'
 function App() {
   return (
     <Router>
@@ -26,6 +29,9 @@ function App() {
         <Route path='/samedaytrain' element={<SameDayTrain/>}/>
         <Route path='/samedaycarjai' element={<SameDayCarJai/>}/>
         <Route path='/samedaytrainjai' element={<SameDayTrainJai/>}/>
+        <Route path='/goa' element={<Goa/>}/>
+        <Route path='/nepal' element={<Nepal/>}/>
+        <Route path='/bhutan' element={<Bhutan/>}/>
       </Routes>
       <Footer />
     </Router>
