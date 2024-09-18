@@ -822,7 +822,7 @@ function Home() {
             >
               <Link to="/goa">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-              Goa Tours
+             Delhi to Goa
               </h5>
 
               <p className="font-normal text-gray-700 lato-bold ">
@@ -830,7 +830,7 @@ function Home() {
                   icon={faLocationDot}
                   style={{ color: "#FFD43B" }}
                 />{" "}               
-                 Goa: Sun, sand, and vibrant culture in a tropical paradise
+                Four Nights and Three Days
               </p>
               </Link>
               <div className="flex justify-evenly items-center">
