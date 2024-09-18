@@ -830,7 +830,7 @@ function Home() {
                   icon={faLocationDot}
                   style={{ color: "#FFD43B" }}
                 />{" "}               
-Goa: Sun, sand, and vibrant culture in a tropical paradise
+                 Goa: Sun, sand, and vibrant culture in a tropical paradise
               </p>
               </Link>
               <div className="flex justify-evenly items-center">
