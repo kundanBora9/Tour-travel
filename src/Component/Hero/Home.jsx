@@ -18,6 +18,7 @@ import Whatsapp from ".//images/Whatsapp.png"
 import Bhutan from './images/Bhutan.jpg';
 import Nepal from './images/Nepal.jpg';
 import Goa from './images/Goa.jpg'
+import CustomBanner from '../../assets/CustomBanner.jpg'
 import { Carousel } from "flowbite-react";
 import { Card } from "flowbite-react";
 import { FloatingLabel, Textarea, Label } from "flowbite-react";
@@ -140,7 +141,12 @@ function Home() {
     </div>
 
 
-      
+      {/* Banner */}
+
+       <div className="mt-">
+        <img src={CustomBanner} alt="" />
+       </div>
+
 
       {/* tours */}
 

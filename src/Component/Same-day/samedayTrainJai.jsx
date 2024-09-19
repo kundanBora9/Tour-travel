@@ -86,7 +86,7 @@ function samedayTrainJai() {
           </div>
       <div className="flex flex-wrap justify-evenly items-center ">
       <div className="flex flex-col">
-        <h1 className="lato-bold text-4xl">Itinerary</h1>
+        <h2 className="lato-bold text-4xl">Itinerary</h2>
         <span className="text-lg">
           {" "}
           Leave Delhi in the early morning. Take the train to Jaipur.

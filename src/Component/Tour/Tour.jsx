@@ -13,6 +13,9 @@ import sameday_4 from '../Hero/images/sameday_4.jpeg'
 import Jaipur from "../Hero/images/Jaipur.jpg"
 import Jodhpur from '../Hero/images/jodhpur.jpg'
 import udaipur from '../Hero/images/udaipur.jpg'
+import Bhutan from '../Hero/images/Bhutan.jpg';
+import Nepal from '../Hero/images/Nepal.jpg';
+import Goa from '../Hero/images/Goa.jpg'
 import { Card } from "flowbite-react";
 import { FloatingLabel, Textarea, Label } from "flowbite-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -673,6 +676,155 @@ function Tour() {
           </div>
         </div>
       </div>
+
+      {/* Goa */}
+          
+      <div  data-aos="fade-up"
+     data-aos-duration="3000">
+        <h2 className="playfair text-6xl font-bold text-center mt-10 ">
+        Goa Awaits: Sun, Sand, and Sea
+        </h2>
+        <div className="flex justify-evenly flex-wrap items-center">
+          <div className="card-1">
+            <Card
+              className="max-w-sm mt-5"
+              imgAlt="Golden Tour Image"
+              imgSrc={Goa}
+            >
+              <Link to="/goa">
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+             Delhi to Goa
+              </h5>
+
+              <p className="font-normal text-gray-700 lato-bold ">
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}               
+                Four Nights and Three Days
+              </p>
+              </Link>
+              <div className="flex justify-evenly items-center">
+                <Link to="/goa">
+                  <p>Read More</p>
+                </Link>
+
+                <div>
+                  <button
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
+                    onClick={handleOpenModal}
+                  >
+                    Book Now
+                  </button>
+                  <Modal isOpen={isOpen} onClose={handleCloseModal}>
+                    <div className="flex justify-center items-center size-full">
+                      <div className="card-1">
+                        <h1 className="playfair text-6xl font-bold text-center mt-10">
+                          Book Now
+                        </h1>
+                        <form className="mt-10">
+                          <FloatingLabel
+                            variant="outlined"
+                            color="success"
+                            label=" Name"
+                            type="text"
+                            name="name"
+                            sizing="sm"
+                            className=""
+                            required
+                          />
+                          <FloatingLabel
+                            variant="outlined"
+                            color="success"
+                            label="Email"
+                            type="email"
+                            name="email"
+                            sizing="sm"
+                            required
+                            className=""
+                          />
+                          <FloatingLabel
+                            variant="outlined"
+                            color="success"
+                            label="Phone Number"
+                            type="number"
+                            name="number"
+                            sizing="sm"
+                            required
+                            className=""
+                          />
+                          <div className="max-w-md">
+                            <div className="mb-2 block"></div>
+                            <Textarea
+                              variant="outlined"
+                              color="success"
+                              id="comment"
+                              placeholder="Enter Tour Name"
+                              required
+                              rows={4}
+                            />
+                          </div>
+
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                            Submit Now
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </Modal>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+ 
+
+ {/* international */}
+ 
+ <div>
+          <h2 data-aos="fade-up"
+     data-aos-duration="2000" className="text-6xl font-bold text-center mt-10 playfair">
+       Nepal & Bhutan: A Journey to the Himalayas
+        </h2>
+        <div className="flex justify-evenly flex-wrap items-center mt-5">
+        <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" className="card-1">
+            <Link to="/nepal">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={Nepal}
+              >
+                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
+                  Nepal Tours
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                "Nepal: A land of breathtaking landscapes, rich culture, and the majestic Himalayas, offering adventure and serenity in equal measure."
+                </p>
+              </Card>
+            </Link>
+          </div>
+          <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" className="card-1">
+            <Link to="/bhutan">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={Bhutan}
+              >
+                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
+                  Bhutan Tours
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                "Bhutan: The Land of the Thunder Dragon, where ancient traditions meet stunning natural beauty in the heart of the Himalayas."
+                </p>
+              </Card>
+            </Link>
+          </div>
+        </div>
+          </div>
+       
     </div>
   )
 }
