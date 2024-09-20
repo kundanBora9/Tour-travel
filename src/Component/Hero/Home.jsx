@@ -1076,7 +1076,7 @@ function Home() {
         />
         <div className="absolute top-0 left-0 w-full h-full bg-[#001F3F] opacity-0 hover:opacity-100 transition duration-300">
           <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
-          "I was worried about how the kids would handle the long travel, but the team made sure we were comfortable at every point. The personalized tour itinerary catered to our needs perfectly. Will definitely book with them again!"</p>
+          "We were looking for a hassle-free travel experience, and Saffron Routes delivered exactly that. From booking to the actual tour, everything was smooth and stress-free. The local insights from our guide were a bonus!"</p>
         </div>
       </div>
     </SwiperSlide>
