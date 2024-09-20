@@ -22,10 +22,10 @@ function NepalTours() {
           <img src={NepalImg4} alt="" className="w-1/3 p-2" />
         </div>
 
-        <div className="flex justify-evenly items-start mt-5 ">
-          <div className=" flex flex-col">
+        <div className="flex flex-wrap justify-center md:justify-evenly items-start mt-5 ">
+          <div className=" flex flex-col w-full md:w-1/2 xl:w-1/2">
             <h2 className="lato-bold text-4xl">Explore Nepal: The Land of Himalayas and Culture</h2>
-            <p className="w-1/2">
+            <p className="w-full md:w-1/2 xl:w-1/2">
               Discover the beauty of Nepal, home to the majestic Himalayas and
               rich cultural heritage. From trekking to Mount Everest and
               exploring serene lakes in Pokhara to spotting wildlife in Chitwan
@@ -36,7 +36,7 @@ function NepalTours() {
               Let us plan your unforgettable Nepal adventure today!
             </p>
           </div>
-          <div className=" border-2 order-2 border-zinc-950 rounded-lg w-1/2 mt-5">
+          <div className=" border-2 order-2 border-zinc-950 rounded-lg w-full md:w-1/2 xl:w-1/2 mt-5 md:mt-0">
             <h1 className="text-center lato-bold text-4xl">Book Now</h1>
             <form className="p-5">
               <FloatingLabel
