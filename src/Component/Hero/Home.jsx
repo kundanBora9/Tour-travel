@@ -106,7 +106,7 @@ function Home() {
     <div className="relative">
   <video src={Video} loop muted autoPlay className="w-full h-full object-cover" />
   <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-    <h1 className="text-white text-3xl lg:text-6xl  playfair ">
+    <h1 className="text-white text-3xl lg:text-7xl  playfair ">
       Explore India's Timeless Beauty
     </h1>
   </div>
@@ -143,7 +143,7 @@ function Home() {
 
       {/* Banner */}
 
-       <div className="mt-">
+       <div className="mt-5">
         <img src={CustomBanner} alt="" />
        </div>
 

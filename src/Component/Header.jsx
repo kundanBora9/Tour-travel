@@ -25,16 +25,16 @@ function Header() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Link to="/" className="text-white">
+        <Link to="/" className="text-white text-2xl">
           Home
         </Link>
-        <Link to="/tour" className="text-white">
+        <Link to="/tour" className="text-white text-2xl">
           Tours
         </Link>
-        <Link to="/about" className="text-white">
+        <Link to="/about" className="text-white text-2xl">
           About us
         </Link>
-        <Link to="/contact" className="text-white">
+        <Link to="/contact" className="text-white text-2xl">
           Contact
         </Link>
       </Navbar.Collapse>
