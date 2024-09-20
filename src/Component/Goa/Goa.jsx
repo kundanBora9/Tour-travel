@@ -35,8 +35,8 @@ function Goa() {
           />
         </div>
 
-        <div className="flex  justify-evenly items-center ">
-          <div className="flex w-1/2 flex-col">
+        <div className="flex flex-wrap justify-center md:justify-evenly items-center ">
+          <div className="flex w-full md:w-1/2 flex-col md:pr-5">
             <h2 className="lato-bold text-4xl">Itinerary</h2>
             <div>
               <h2 className="font-bold text-3xl playfair">Day 1: Arrival Goa</h2>
@@ -90,7 +90,7 @@ function Goa() {
               </p>
             </div>
           </div>
-          <div className="border-2 order-2 border-zinc-950 rounded-lg  mt-5">
+          <div className="border-2 order-2 border-zinc-950 rounded-lg mt-5 md:mt-0 md:w-1/2">
             <h1 className="text-center lato-bold text-4xl">Book Now</h1>
             <form className="p-5">
               <FloatingLabel

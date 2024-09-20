@@ -13,7 +13,7 @@ import SameDayTrainJai from './Component/Same-day/samedayTrainJai.jsx';
 import SameDayCarJai from './Component/Same-day/samedayCarJai.jsx';
 import Goa from './Component/Goa/Goa.jsx'
 import Nepal from './Component/Nepal/NepalTours.jsx'
-import Bhutan from './Component/Bhuan Tours/BhutanTours.jsx'
+import Bhutan from './Component/BhutanTours/BhutanTours.jsx'
 function App() {
   return (
     <Router>
