@@ -114,7 +114,7 @@ function Home() {
   {/* Whatsapp */}
 
   <div className="fixed right-10 bottom-5 p-3" style={{zIndex:"99",}}>
-      <a href="https://wa.me/919760402549?text=Hello How Cai I help You ?" target="_blank">
+      <a href="https://wa.me/8171932323?text= Hello How Can I help You ?" target="_blank">
         <img src={Whatsapp} alt="Whatsapp" className="w-16 lg:w-20" />
       </a>
     </div>
