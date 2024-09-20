@@ -128,7 +128,7 @@ function Home() {
         transition={{ duration: 20, repeat: Infinity }}
         className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
       >
-       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/1234567890">+1234567890</a></p>
+       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/8171932323">8171932323</a></p>
       </motion.div>
       <motion.div
         initial={{ x: 1000 }}
@@ -136,7 +136,7 @@ function Home() {
         transition={{ duration: 20, repeat: Infinity,delay:3}}
         className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
       >
-       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/1234567890">+1234567890</a></p>
+       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/8171932323">8171932323</a></p>
       </motion.div>
     </div>
 
