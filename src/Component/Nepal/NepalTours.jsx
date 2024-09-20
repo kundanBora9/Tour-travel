@@ -23,7 +23,7 @@ function NepalTours() {
           <div className=" flex flex-col">
             <h2 className="lato-bold text-4xl">Explore Nepal: The Land of Himalayas and Culture</h2>
             <p className="w-1/2">
-              Discover the beauty of Nepal, home to the majestic Himalayas and
+              Discover the beauty of <Nepal></Nepal>, home to the majestic Himalayas and
               rich cultural heritage. From trekking to Mount Everest and
               exploring serene lakes in Pokhara to spotting wildlife in Chitwan
               and visiting the birthplace of Lord Buddha in Lumbini, Nepal
