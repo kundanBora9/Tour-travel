@@ -182,7 +182,7 @@ function Home() {
               <Card
                 className="max-w-sm"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc={Nepal}
+                imgSrc={slider_2}
               >
                 <h5 className="text-2xl playfair font-bold tracking-tight text-gray-900 dark:text-white">
                   Rajasthan Tour
