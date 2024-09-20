@@ -128,7 +128,7 @@ function Home() {
         transition={{ duration: 20, repeat: Infinity }}
         className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
       >
-       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/8171932323">8171932323</a></p>
+       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/8171932323"> +91 8171932323</a></p>
       </motion.div>
       <motion.div
         initial={{ x: 1000 }}
@@ -136,7 +136,7 @@ function Home() {
         transition={{ duration: 20, repeat: Infinity,delay:3}}
         className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
       >
-       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/8171932323">8171932323</a></p>
+       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/8171932323"> +91 8171932323</a></p>
       </motion.div>
     </div>
 
@@ -1025,56 +1025,35 @@ function Home() {
     onSwiper={(swiper) => console.log(swiper)}
   >
     <SwiperSlide>
-      <div className="relative">
-        <img
-          src={Client_img}
-          alt=""
-          srcset=""
-          className="w-full h-60 object-cover"
-        />
-        <div className="absolute top-0 left-0 w-full h-full bg-[#001F3F] opacity-0 hover:opacity-100 transition duration-300">
+      <div className="w-full h-full">
+        
+        <div className=" w-full h-full bg-[#001F3F] ">
           <p className="p-4  text-white  text-center text-lg">⭐ ⭐ ⭐ ⭐ ⭐<br/>
           "The day tour was simply perfect! From the moment we were picked up to the final stop, everything was well-organized and seamless. Our guide was knowledgeable and friendly, making the whole experience even more enjoyable. Highly recommend their services!"</p>
         </div>
       </div>
     </SwiperSlide>
     <SwiperSlide>
-      <div className="relative">
-        <img
-          src={Client_img2}
-          alt=""
-          srcset=""
-          className="w-full h-60 object-cover"
-        />
-        <div className="absolute top-0 left-0 w-full h-full bg-[#001F3F] opacity-0 hover:opacity-100 transition duration-300">
+      <div className="w-full h-full">
+        <div className=" w-full h-full bg-[#001F3F] ">
           <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
           "I booked a same-day tour of Jaipur, and it exceeded all my expectations. The itinerary was perfectly balanced between sightseeing and relaxation. The driver was professional, and the guide brought the city’s history to life!"</p>
         </div>
       </div>
     </SwiperSlide>
     <SwiperSlide>
-      <div className="relative">
-        <img
-          src={Client_img}
-          alt=""
-          srcset=""
-          className="w-full h-60 object-cover"
-        />
-        <div className="absolute top-0 left-0 w-full h-full bg-[#001F3F] opacity-0 hover:opacity-100 transition duration-300">
+      <div className="w-full h-full">
+       
+        <div className="w-full h-full bg-[#001F3F]  ">
           <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
           "Saffron Routes made our Golden Triangle tour an unforgettable journey. From the Taj Mahal to the vibrant streets of Jaipur, every moment was magical. We couldn't have asked for better hospitality and care."</p>
         </div>
       </div>
     </SwiperSlide>
     <SwiperSlide>
-      <div className="relative">
-        <img
-          src={Client_img2}
-          alt=""
-          srcset=""
-          className="w-full h-60 object-cover"
-        />
-        <div className="absolute top-0 left-0 w-full h-full bg-[#001F3F] opacity-0 hover:opacity-100 transition duration-300">
+      <div className="w-full h-full">
+        
+        <div className="w-full h-full bg-[#001F3F] ">
           <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
           "We were looking for a hassle-free travel experience, and Saffron Routes delivered exactly that. From booking to the actual tour, everything was smooth and stress-free. The local insights from our guide were a bonus!"</p>
         </div>
