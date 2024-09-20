@@ -1029,7 +1029,9 @@ function Home() {
         
         <div className=" w-full h-full bg-[#001F3F] ">
           <p className="p-4  text-white  text-center text-lg">⭐ ⭐ ⭐ ⭐ ⭐<br/>
-          "The day tour was simply perfect! From the moment we were picked up to the final stop, everything was well-organized and seamless. Our guide was knowledgeable and friendly, making the whole experience even more enjoyable. Highly recommend their services!"</p>
+          "The day tour was simply perfect! From the moment we were picked up to the final stop, everything was well-organized and seamless. Our guide was knowledgeable and friendly, making the whole experience even more enjoyable. Highly recommend their services!"<br/>
+          -Bella Eperson
+</p>
         </div>
       </div>
     </SwiperSlide>
@@ -1037,7 +1039,9 @@ function Home() {
       <div className="w-full h-full">
         <div className=" w-full h-full bg-[#001F3F] ">
           <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
-          "I booked a same-day tour of Jaipur, and it exceeded all my expectations. The itinerary was perfectly balanced between sightseeing and relaxation. The driver was professional, and the guide brought the city’s history to life!"</p>
+          "I booked a same-day tour of Jaipur, and it exceeded all my expectations. The itinerary was perfectly balanced between sightseeing and relaxation. The driver was professional, and the guide brought the city’s history to life!"
+          <br/>
+          -Prashant nair</p>
         </div>
       </div>
     </SwiperSlide>
@@ -1046,7 +1050,9 @@ function Home() {
        
         <div className="w-full h-full bg-[#001F3F]  ">
           <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
-          "Saffron Routes made our Golden Triangle tour an unforgettable journey. From the Taj Mahal to the vibrant streets of Jaipur, every moment was magical. We couldn't have asked for better hospitality and care."</p>
+          "Saffron Routes made our Golden Triangle tour an unforgettable journey. From the Taj Mahal to the vibrant streets of Jaipur, every moment was magical. We couldn't have asked for better hospitality and care."<br/>
+          -Andrew Johns
+          </p>
         </div>
       </div>
     </SwiperSlide>
@@ -1055,7 +1061,8 @@ function Home() {
         
         <div className="w-full h-full bg-[#001F3F] ">
           <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
-          "We were looking for a hassle-free travel experience, and Saffron Routes delivered exactly that. From booking to the actual tour, everything was smooth and stress-free. The local insights from our guide were a bonus!"</p>
+          "We were looking for a hassle-free travel experience, and Saffron Routes delivered exactly that. From booking to the actual tour, everything was smooth and stress-free. The local insights from our guide were a bonus!"<br/>
+          — Carlos P.</p>
         </div>
       </div>
     </SwiperSlide>
