@@ -1019,8 +1019,8 @@ function Home() {
         </h2>
         <div className="flex flex-wrap justify-center items-center mt-10">
   <Swiper
-    spaceBetween={50}
-    slidesPerView={3}
+    spaceBetween={10}
+    slidesPerView={(window.innerWidth >= 1024) ? 3 : 1}
     onSlideChange={() => console.log("slide change")}
     onSwiper={(swiper) => console.log(swiper)}
   >
