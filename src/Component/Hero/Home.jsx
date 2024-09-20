@@ -1018,47 +1018,70 @@ function Home() {
           What Our Clients Say
         </h2>
         <div className="flex flex-wrap justify-center items-center mt-10">
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={3}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-          >
-            <SwiperSlide>
-              {" "}
-              <img
-                src={Client_img}
-                alt=""
-                srcset=""
-                className="w-full h-60 object-cover"
-              />{" "}
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={Client_img2}
-                alt=""
-                srcset=""
-                className="w-full h-60 object-cover"
-              />{" "}
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={Client_img}
-                alt=""
-                srcset=""
-                className="w-full h-60 object-cover"
-              />{" "}
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={Client_img2}
-                alt=""
-                srcset=""
-                className="w-full h-60 object-cover"
-              />{" "}
-            </SwiperSlide>
-          </Swiper>
+  <Swiper
+    spaceBetween={50}
+    slidesPerView={3}
+    onSlideChange={() => console.log("slide change")}
+    onSwiper={(swiper) => console.log(swiper)}
+  >
+    <SwiperSlide>
+      <div className="relative">
+        <img
+          src={Client_img}
+          alt=""
+          srcset=""
+          className="w-full h-60 object-cover"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-[#001F3F] opacity-0 hover:opacity-100 transition duration-300">
+          <p className="p-4  text-white  text-center text-lg">⭐ ⭐ ⭐ ⭐ ⭐<br/>
+          "The day tour was simply perfect! From the moment we were picked up to the final stop, everything was well-organized and seamless. Our guide was knowledgeable and friendly, making the whole experience even more enjoyable. Highly recommend their services!"</p>
         </div>
+      </div>
+    </SwiperSlide>
+    <SwiperSlide>
+      <div className="relative">
+        <img
+          src={Client_img2}
+          alt=""
+          srcset=""
+          className="w-full h-60 object-cover"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-[#001F3F] opacity-0 hover:opacity-100 transition duration-300">
+          <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
+          "I booked a same-day tour of Jaipur, and it exceeded all my expectations. The itinerary was perfectly balanced between sightseeing and relaxation. The driver was professional, and the guide brought the city’s history to life!"</p>
+        </div>
+      </div>
+    </SwiperSlide>
+    <SwiperSlide>
+      <div className="relative">
+        <img
+          src={Client_img}
+          alt=""
+          srcset=""
+          className="w-full h-60 object-cover"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-[#001F3F] opacity-0 hover:opacity-100 transition duration-300">
+          <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
+          "Saffron Routes made our Golden Triangle tour an unforgettable journey. From the Taj Mahal to the vibrant streets of Jaipur, every moment was magical. We couldn't have asked for better hospitality and care."</p>
+        </div>
+      </div>
+    </SwiperSlide>
+    <SwiperSlide>
+      <div className="relative">
+        <img
+          src={Client_img2}
+          alt=""
+          srcset=""
+          className="w-full h-60 object-cover"
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-[#001F3F] opacity-0 hover:opacity-100 transition duration-300">
+          <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
+          "I was worried about how the kids would handle the long travel, but the team made sure we were comfortable at every point. The personalized tour itinerary catered to our needs perfectly. Will definitely book with them again!"</p>
+        </div>
+      </div>
+    </SwiperSlide>
+  </Swiper>
+</div>
       </div>
 
       {/* Start your Journey */}
