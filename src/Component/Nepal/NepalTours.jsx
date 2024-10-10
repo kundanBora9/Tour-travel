@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import NepalBanner from "../../assets/nepal-banner.jpg";
 import NepalImg1 from "../../assets/nepal-img1.jpg";
 import NepalImg2 from "../../assets/nepal-img2.jpg";
@@ -9,6 +10,34 @@ import { FloatingLabel, Textarea, Label } from "flowbite-react";
 
 
 function NepalTours() {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const formData = new FormData(event.target);
+  
+    formData.append("access_key", "4a80dc0b-a8f6-4759-92d5-f08742bcdaf6");
+  
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+  
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+  
+    if (res.success) {
+      alert(res.message);
+      event.target.reset();
+    }
+  };
   return (
     <>
       <div>
@@ -38,7 +67,7 @@ function NepalTours() {
           </div>
           <div className=" border-2 order-2 border-zinc-950 rounded-lg w-full md:w-1/2 xl:w-1/2 mt-5 md:mt-0">
             <h1 className="text-center lato-bold text-4xl">Book Now</h1>
-            <form className="p-5">
+            <form className="p-5" onSubmit={onSubmit}>
               <FloatingLabel
                 variant="outlined"
                 color="success"

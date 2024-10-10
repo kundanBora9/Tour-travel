@@ -38,6 +38,36 @@ const Modal = ({ isOpen, onClose, children }) => {
 };
 
 function Tour() {
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const formData = new FormData(event.target);
+  
+    formData.append("access_key", "4a80dc0b-a8f6-4759-92d5-f08742bcdaf6");
+  
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+  
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+  
+    if (res.success) {
+      alert(res.message);
+      event.target.reset();
+    }
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -158,7 +188,7 @@ function Tour() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -201,7 +231,8 @@ function Tour() {
                             />
                           </div>
 
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button type='submit'
+                           className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                             Submit Now
                           </button>
                         </form>
@@ -247,7 +278,7 @@ function Tour() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -290,7 +321,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                             Submit Now
                           </button>
                         </form>
@@ -336,7 +367,7 @@ function Tour() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -379,7 +410,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                             Submit Now
                           </button>
                         </form>
@@ -425,7 +456,7 @@ function Tour() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -468,7 +499,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                             Submit Now
                           </button>
                         </form>
@@ -521,7 +552,7 @@ function Tour() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -564,7 +595,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                             Submit Now
                           </button>
                         </form>
@@ -618,7 +649,7 @@ function Tour() {
                           <h1 className="playfair text-6xl font-bold text-center mt-10">
                             Book Now
                           </h1>
-                          <form className="mt-10">
+                          <form className="mt-10" onSubmit={onSubmit}>
                             <FloatingLabel
                               variant="outlined"
                               color="success"
@@ -661,7 +692,7 @@ function Tour() {
                               />
                             </div>
 
-                            <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                            <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                               Submit Now
                             </button>
                           </form>
@@ -722,7 +753,7 @@ function Tour() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -765,7 +796,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                             Submit Now
                           </button>
                         </form>

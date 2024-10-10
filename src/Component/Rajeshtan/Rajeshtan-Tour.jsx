@@ -7,8 +7,68 @@ import Mehrangarh from '../../assets/Mehrangarh.jpg'
 import LakePichola from '../../assets/Lake Pichola.jpg'
 import { Link } from "react-router-dom";
 import CrystalGallery from '../../assets/crystel.jpeg'
+import { useState } from "react";
+import { createPortal } from "react-dom";
+import { FloatingLabel, Textarea, Label } from "flowbite-react";
+
+const Modal = ({ isOpen, onClose, children }) => {
+  if (!isOpen) return null;
+
+  return createPortal(
+    <div className="fixed top-0 left-0 w-full h-full  bg-opacity-50 flex justify-center items-center">
+      <div className="bg-white p-4 rounded-md">
+        {children}
+        <button
+          className="bg-red-500 text-white p-2 rounded-md"
+          onClick={onClose}
+        >
+          Close
+        </button>
+      </div>
+    </div>,
+    document.body
+  );
+};
+
 
 function Rajeshtan() {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const formData = new FormData(event.target);
+  
+    formData.append("access_key", "4a80dc0b-a8f6-4759-92d5-f08742bcdaf6");
+  
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+  
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+  
+    if (res.success) {
+      alert(res.message);
+      event.target.reset();
+    }
+  };
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
   return (
     <div>
       <div className="relative">
@@ -159,8 +219,73 @@ function Rajeshtan() {
             the airport for your departure.
           </p>
         </div>
-        <div className="w-full md:w-1/2 flex justify-start md:justify-end ">
+        <div className="flex flex-wrap justify-center mt-10 mx-5">
+
         </div>
+        <div className=" text-center">
+        <button
+          className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md "
+          onClick={handleOpenModal}
+        >
+          Book Now
+        </button>
+        <Modal isOpen={isOpen} onClose={handleCloseModal}>
+          <div className="flex justify-center items-center size-full">
+            <div className="card-1">
+              <h1 className="playfair text-6xl font-bold text-center mt-10">
+                Book Now
+              </h1>
+              <form className="mt-10" onSubmit={onSubmit}>
+                <FloatingLabel
+                  variant="outlined"
+                  color="success"
+                  label=" Name"
+                  type="text"
+                  name="name"
+                  sizing="sm"
+                  className=""
+                  required
+                />
+                <FloatingLabel
+                  variant="outlined"
+                  color="success"
+                  label="Email"
+                  type="email"
+                  name="email"
+                  sizing="sm"
+                  required
+                  className=""
+                />
+                <FloatingLabel
+                  variant="outlined"
+                  color="success"
+                  label="Phone Number"
+                  type="number"
+                  name="number"
+                  sizing="sm"
+                  required
+                  className=""
+                />
+                <div className="max-w-md">
+                  <div className="mb-2 block"></div>
+                  <Textarea
+                    variant="outlined"
+                    color="success"
+                    id="comment"
+                    placeholder="Enter Tour Name"
+                    required
+                    rows={4}
+                  />
+                </div>
+
+                <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                  Submit Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </Modal>
+      </div>
       </div>
     </div>
   );

@@ -65,8 +65,8 @@ const onSubmit = async (event) => {
   }
   const formData = new FormData(event.target);
 
-  formData.append("access_key", "b4b4a765-5689-47dc-8442-abf33c08237e");
-
+  formData.append("access_key", "4a80dc0b-a8f6-4759-92d5-f08742bcdaf6");
+  console.log(formData);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
 
@@ -128,7 +128,7 @@ function Home() {
         transition={{ duration: 20, repeat: Infinity }}
         className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
       >
-       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/8171932323"> +91 8171932323</a></p>
+       <p> Email: <a href="mailto:example@example.com">contact@saffronroutes.in</a> | WhatsApp: <a href="https://wa.me/8171932323"> +91 8171932323</a></p>
       </motion.div>
       <motion.div
         initial={{ x: 1000 }}
@@ -136,7 +136,7 @@ function Home() {
         transition={{ duration: 20, repeat: Infinity,delay:3}}
         className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
       >
-       <p> Email: <a href="mailto:example@example.com">example@example.com</a> | WhatsApp: <a href="https://wa.me/8171932323"> +91 8171932323</a></p>
+       <p> Email: <a href="mailto:example@example.com">contact@saffronroutes.in</a> | WhatsApp: <a href="https://wa.me/8171932323"> +91 8171932323</a></p>
       </motion.div>
     </div>
 
@@ -267,7 +267,7 @@ function Home() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -310,7 +310,7 @@ function Home() {
                             />
                           </div>
 
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500" >
                             Submit
                           </button>
                         </form>
@@ -362,7 +362,7 @@ function Home() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -457,7 +457,7 @@ function Home() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -552,7 +552,7 @@ function Home() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -595,7 +595,7 @@ function Home() {
                             />
                           </div>
 
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500"onSubmit={onSubmit}>
                             Submit Now
                           </button>
                         </form>
@@ -652,7 +652,7 @@ function Home() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -754,7 +754,7 @@ function Home() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -857,7 +857,7 @@ function Home() {
                         <h1 className="playfair text-6xl font-bold text-center mt-10">
                           Book Now
                         </h1>
-                        <form className="mt-10">
+                        <form className="mt-10" onSubmit={onSubmit}>
                           <FloatingLabel
                             variant="outlined"
                             color="success"
@@ -900,7 +900,7 @@ function Home() {
                             />
                           </div>
 
-                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500" >
                             Submit Now
                           </button>
                         </form>
@@ -1077,7 +1077,7 @@ function Home() {
           <h2 className="playfair text-6xl font-bold text-center mt-10">
             Start Your Journey
           </h2>
-          <form className="mt-10">
+          <form className="mt-10" onSubmit={onSubmit}>
             <FloatingLabel
               variant="outlined"
               color="success"
