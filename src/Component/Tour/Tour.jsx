@@ -79,105 +79,118 @@ function Tour() {
   };
   return (
     <div>
+
+      {/* tours */}
       <div>
-        <h1 className="text-6xl font-bold text-center mt-10 playfair">
+        <h2 data-aos="fade-up"
+     data-aos-duration="2000" className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mt-10 playfair">
           Discover the Majesty of Agra, Delhi and Rajasthan
-        </h1>
-        <div className="flex justify-evenly flex-wrap items-center mt-10">
-          <div>
-          <Link to="/golden">
-          <Card
-            className="max-w-sm"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={GoldenTriangle}
-          >
-             <Link to="/golden">
-            <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
-              Golden Triangle
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
-              Explore the majestic forts and palaces of Agra and Rajasthan and
-              Delhi, Experience the rich history
-            </p>
+        </h2>
+        <div data-aos="fade-up"
+     data-aos-duration="2000" className="flex justify-evenly flex-wrap items-center gap-5 md:gap-3 lg:gap-3 mt-10">
+         
+          <div data-aos="fade-up"
+     data-aos-duration="2000" className="card-1">
+            <Link to="/rajeshtan" className="">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={slider_2}
+              >
+                <h5 className="text-2xl playfair font-bold tracking-tight text-gray-900 dark:text-white">
+                  Rajasthan Tour
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                  Experience the splendor of Rajasthan's magnificent palaces and
+                  forts while learning about its fascinating past.
+                </p>
+              </Card>
             </Link>
-          </Card>
-          </Link>
           </div>
 
-         <div>
-         <Link to="/rajeshtan" className="">
-         <Card
-            className="max-w-sm"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={slider_2}
-          >
-            <Link to="/rajeshtan">
-            <h5 className="text-2xl playfair font-bold tracking-tight text-gray-900 dark:text-white">
-            Rajasthan Tour
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
-              Experience the splendor of Rajasthan's magnificent palaces and
-              forts while learning about its fascinating past.
-            </p>
+          <div data-aos="fade-up"
+     data-aos-duration="2000" className="card-1">
+            <Link to="/golden">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={GoldenTriangle}
+              >
+                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
+                  Golden Triangle
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                  Explore the majestic forts and palaces of Agra and Rajasthan
+                  and Delhi, Experience the rich history
+                </p>
+              </Card>
             </Link>
-          </Card>
-          </Link>
-         </div>
+          </div>
 
-          <div>
-          <Link to="/sameday">
-          <Card
-            className="max-w-sm"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={sameday}
-          >
+ 
+          <div data-aos="fade-up"
+     data-aos-duration="2000" className="card-1">
             <Link to="/sameday">
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-              Same Day Tour
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
-              Experience a Same Day Tour of Rajasthan, Delhi, and Agra,
-              exploring majestic forts, palaces, and rich history.
-            </p>
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={sameday}
+              >
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+                  Same Day Tour
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                  Experience a Same Day Tour of Rajasthan, Delhi, and Agra,
+                  exploring majestic forts, palaces, and rich history.
+                </p>
+              </Card>
             </Link>
-          </Card>
-          </Link>
           </div>
-          
         </div>
       </div>
 
       {/* same day tour */}
 
-      <div>
-        <h1 className=" font-bold text-center mt-10 playfair text-6xl">
+      <div className=" ">
+        <h2 data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000" className=" font-bold text-center mt-10 playfair text-3xl md:text-4xl lg:text-4xl">
           Same Day Tour
-        </h1>
-        <div className="flex justify-evenly flex-wrap items-center mt-10">
-          <div className="card-1">
+        </h2>
+        <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000" className=" gap-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ml-10 mx-auto items-center mt-5   ">
+          <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000" className="card-1">
             <Card
-              className="max-w-sm"
+              className=" w-72 h-96"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_2}
             >
               <Link to="/sameday">
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 playfair">
                 Same Day Delhi to Agra
               </h5>
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 playfair">
                 By Car
               </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Taj Mahal/AgraFort......
+              <p className="font-normal text-sm
+               text-gray-700 dark:text-gray-400">
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                Taj Mahal/AgraFort......
               </p>
               </Link>
-              <div className="flex justify-evenly items-center">
+              <div className="flex justify-between items-center">
               <Link to="/sameday">
                 <p>Read More</p>
                 </Link>
                 <div>
                   <button
-                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md text-sm"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -231,9 +244,8 @@ function Tour() {
                             />
                           </div>
 
-                          <button type='submit'
-                           className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
-                            Submit Now
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500" >
+                            Submit
                           </button>
                         </form>
                       </div>
@@ -244,24 +256,30 @@ function Tour() {
             </Card>
           </div>
 
-          <div className="card-2">
+          <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000" className="card-2">
             <Card
-              className="max-w-sm"
+              className=" w-72 h-96 "
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_1}
             >
-              <Link to="/samedaytrain">
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+                 <Link to="/samedaytrain">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Agra
               </h5>
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 By Train
               </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Taj Mahal/AgraFort......
+              <p className="font-normal text-gray-700">
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                Taj Mahal/AgraFort......
               </p>
               </Link>
-              <div className="flex justify-evenly items-center">
+              <div className="flex justify-between items-center">
               <Link to="/samedaytrain">
                 <p>Read More</p>
                 </Link>
@@ -321,7 +339,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                             Submit Now
                           </button>
                         </form>
@@ -333,24 +351,30 @@ function Tour() {
             </Card>
           </div>
 
-          <div className="card-3">
+          <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000" className="card-3">
             <Card
-              className="max-w-sm"
+              className="w-72 h-96"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_3}
             >
               <Link to="/samedaycarjai">
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Jaipur
               </h5>
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 By Car
               </h5>
-              </Link>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Amber Fort, City Palace, and Hawa Mahal
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                Amber Fort, City Palace.....
               </p>
-              <div className="flex justify-evenly items-center">
+              </Link>
+              <div className="flex justify-between items-center">
               <Link to="/samedaycarjai">
                 <p>Read More</p>
                 </Link>
@@ -410,7 +434,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                             Submit Now
                           </button>
                         </form>
@@ -422,24 +446,30 @@ function Tour() {
             </Card>
           </div>
 
-          <div className="card-4">
+          <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1000" className="card-4">
             <Card
-              className="max-w-sm mt-5"
+              className="w-72 h-96"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_4}
             >
-               <Link to="/samedaytrainjai">
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+                <Link to="/samedaytrainjai">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Jaipur
               </h5>
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 By Train
               </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> Amber Fort, City Palace, and Hawa Mahal
+              <p className="font-normal text-gray-700">
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                Amber Fort, City Palace...
               </p>
               </Link>
-              <div className="flex justify-evenly items-center">
+              <div className="flex justify-between items-center">
               <Link to="/samedaytrainjai">
                 <p>Read More</p>
                 </Link>
@@ -499,7 +529,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500"onSubmit={onSubmit}>
                             Submit Now
                           </button>
                         </form>
@@ -513,31 +543,36 @@ function Tour() {
         </div>
       </div>
 
-      {/* Rajesthan Tour */}
-
-      
-      <div>
-        <h1 className=" font-bold text-center mt-10 playfair text-6xl">
+      <div className="flex justify-center  items-center gap-10 flex-wrap md:flex-nowrap lg:flex-nowrap">
+  {/* Rajesthan Tour */}
+<div data-aos="fade-up"
+     data-aos-duration="2000">
+      <h2 className=" font-bold text-center mt-10 playfair text-4xl">
           Rajasthan Tour
-        </h1>
+        </h2>
         <div className="flex justify-evenly flex-wrap items-center">
-          <div>
+        
+          <div className="">
             <Card
-              className="max-w-sm mt-5"
+              className="max-w-sm mt-5 card-1"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={Jodhpur}
             >
               <Link to="/rajeshtan">
               <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-             Rajasthan Tour
+                Rajasthan Tour
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-              <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> For Six Nights and Seven Days
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                For Six Nights and Seven Days
               </p>
               </Link>
               <div className="flex justify-evenly items-center">
-              <Link to="/rajeshtan">
-                <p>Read More</p>
+                <Link to="/rajeshtan">
+                  <p>Read More</p>
                 </Link>
                 <div>
                   <button
@@ -595,7 +630,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
                             Submit Now
                           </button>
                         </form>
@@ -609,111 +644,114 @@ function Tour() {
         </div>
       </div>
 
+      
       {/* Golden Tour */}
 
-      <div>
-        <h1 className="playfair text-6xl font-bold text-center mt-10">
+      <div  data-aos="fade-up"
+     data-aos-duration="2000">
+      <h2 className="playfair text-4xl  text-center font-bold  mt-10 ">
           Golden Triangle Tour
-        </h1>
+        </h2>
         <div className="flex justify-evenly flex-wrap items-center">
-          <div>
-              <Card
-                className="max-w-sm mt-5"
-                imgAlt="Golden Tour Image"
-                imgSrc={slider_1}
-              >
-                 <Link to="/golden">
-                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
-                  Delhi Agra and Jaipur 
-                </h5>
-                
-                <p className="font-normal text-gray-700 lato-bold ">
-                <FontAwesomeIcon icon={faLocationDot} style={{color: "#FFD43B",}} /> For Four Nights and Five Days
-                </p>
-                </Link>
-                <div className="flex justify-evenly items-center">
+        
+          <div className="card-1">
+            <Card
+              className="max-w-sm mt-5"
+              imgAlt="Golden Tour Image"
+              imgSrc={slider_1}
+            >
+              <Link to="/golden">
+              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+                Delhi Agra and Jaipur
+              </h5>
+
+              <p className="font-normal text-gray-700 lato-bold ">
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ color: "#FFD43B" }}
+                />{" "}
+                For Four Nights and Five Days
+              </p>
+              </Link>
+              <div className="flex justify-evenly items-center">
                 <Link to="/golden">
                   <p>Read More</p>
-                   </Link>
-                  
-                  <div>
-                    <button
-                      className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
-                      onClick={handleOpenModal}
-                    >
-                      Book Now
-                    </button>
-                    <Modal isOpen={isOpen} onClose={handleCloseModal}>
-                      <div className="flex justify-center items-center size-full">
-                        <div className="card-1">
-                          <h1 className="playfair text-6xl font-bold text-center mt-10">
-                            Book Now
-                          </h1>
-                          <form className="mt-10" onSubmit={onSubmit}>
-                            <FloatingLabel
-                              variant="outlined"
-                              color="success"
-                              label=" Name"
-                              type="text"
-                              name="name"
-                              sizing="sm"
-                              className=""
-                              required
-                            />
-                            <FloatingLabel
-                              variant="outlined"
-                              color="success"
-                              label="Email"
-                              type="email"
-                              name="email"
-                              sizing="sm"
-                              required
-                              className=""
-                            />
-                            <FloatingLabel
-                              variant="outlined"
-                              color="success"
-                              label="Phone Number"
-                              type="number"
-                              name="number"
-                              sizing="sm"
-                              required
-                              className=""
-                            />
-                            <div className="max-w-md">
-                              <div className="mb-2 block"></div>
-                              <Textarea
-                                variant="outlined"
-                                color="success"
-                                id="comment"
-                                placeholder="Enter Tour Name"
-                                required
-                                rows={4}
-                              />
-                            </div>
+                </Link>
 
-                            <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
-                              Submit Now
-                            </button>
-                          </form>
-                        </div>
+                <div>
+                  <button
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md"
+                    onClick={handleOpenModal}
+                  >
+                    Book Now
+                  </button>
+                  <Modal isOpen={isOpen} onClose={handleCloseModal}>
+                    <div className="flex justify-center items-center size-full">
+                      <div className="card-1">
+                        <h1 className="playfair text-6xl font-bold text-center mt-10">
+                          Book Now
+                        </h1>
+                        <form className="mt-10" onSubmit={onSubmit}>
+                          <FloatingLabel
+                            variant="outlined"
+                            color="success"
+                            label=" Name"
+                            type="text"
+                            name="name"
+                            sizing="sm"
+                            className=""
+                            required
+                          />
+                          <FloatingLabel
+                            variant="outlined"
+                            color="success"
+                            label="Email"
+                            type="email"
+                            name="email"
+                            sizing="sm"
+                            required
+                            className=""
+                          />
+                          <FloatingLabel
+                            variant="outlined"
+                            color="success"
+                            label="Phone Number"
+                            type="number"
+                            name="number"
+                            sizing="sm"
+                            required
+                            className=""
+                          />
+                          <div className="max-w-md">
+                            <div className="mb-2 block"></div>
+                            <Textarea
+                              variant="outlined"
+                              color="success"
+                              id="comment"
+                              placeholder="Enter Tour Name"
+                              required
+                              rows={4}
+                            />
+                          </div>
+
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                            Submit Now
+                          </button>
+                        </form>
                       </div>
-                    </Modal>
-                  </div>
+                    </div>
+                  </Modal>
                 </div>
-              </Card>
-             
-            
+              </div>
+            </Card>
           </div>
         </div>
       </div>
 
-      {/* Goa */}
-          
       <div  data-aos="fade-up"
-     data-aos-duration="3000">
-        <h2 className="playfair text-6xl font-bold text-center mt-10 ">
-        Goa Awaits: Sun, Sand, and Sea
+     data-aos-duration="2000">
+        <h2 className="playfair text-4xl  font-bold text-center mt-10 ">
+        Goa Tour
         </h2>
         <div className="flex justify-evenly flex-wrap items-center">
           <div className="card-1">
@@ -796,7 +834,7 @@ function Tour() {
                             />
                           </div>
 
-                          <button type='submit' className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
+                          <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500" >
                             Submit Now
                           </button>
                         </form>
@@ -809,6 +847,7 @@ function Tour() {
           </div>
         </div>
       </div>
+</div>
  
 
  {/* international */}

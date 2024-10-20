@@ -121,24 +121,34 @@ function Home() {
 
 
       {/* marquee */}
-      <div className="flex justify-center items-center  bg-orange-500  mt-5 overflow-hidden">
-      <motion.div
-        initial={{ x: 1000 }}
-        animate={{ x: -1000 }}
-        transition={{ duration: 20, repeat: Infinity }}
-        className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
-      >
-       <p> Email: <a href="mailto:example@example.com">contact@saffronroutes.in</a> | WhatsApp: <a href="https://wa.me/8171932323"> +91 8171932323</a></p>
-      </motion.div>
-      <motion.div
-        initial={{ x: 1000 }}
-        animate={{ x: -1000 }}
-        transition={{ duration: 20, repeat: Infinity,delay:3}}
-        className="text-lg font-bold text-white p-4 rounded-md flex justify-center items-center gap-5"
-      >
-       <p> Email: <a href="mailto:example@example.com">contact@saffronroutes.in</a> | WhatsApp: <a href="https://wa.me/8171932323"> +91 8171932323</a></p>
-      </motion.div>
-    </div>
+      <div className="flex justify-center items-center bg-orange-500 mt-5 overflow-hidden">
+  {/* First motion div */}
+  <motion.div
+    initial={{ x: 1000 }}
+    animate={{ x: -1000 }}
+    transition={{ duration: 20, repeat: Infinity }}
+    className="text-sm md:text-lg font-bold text-white p-2 md:p-4 rounded-md flex justify-center items-center gap-3 md:gap-5 w-full"
+  >
+    <p className="flex items-center gap-2 whitespace-nowrap">
+      Email: <a href="mailto:example@example.com">contact@saffronroutes.in</a> | WhatsApp:{" "}
+      <a href="https://wa.me/8171932323">+91 8171932323</a>
+    </p>
+  </motion.div>
+
+  {/* Second motion div with delay */}
+  <motion.div
+    initial={{ x: 1000 }}
+    animate={{ x: -1000 }}
+    transition={{ duration: 20, repeat: Infinity, delay: 3 }}
+    className="text-sm md:text-lg font-bold text-white p-2 md:p-4 rounded-md flex justify-center items-center gap-3 md:gap-5 w-full"
+  >
+    <p className="flex items-center gap-2 whitespace-nowrap">
+      Email: <a href="mailto:example@example.com">contact@saffronroutes.in</a> | WhatsApp:{" "}
+      <a href="https://wa.me/8171932323">+91 8171932323</a>
+    </p>
+  </motion.div>
+</div>
+
 
 
       {/* Banner */}
@@ -152,32 +162,14 @@ function Home() {
 
       <div>
         <h2 data-aos="fade-up"
-     data-aos-duration="3000" className="text-6xl font-bold text-center mt-10 playfair">
+     data-aos-duration="2000" className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mt-10 playfair">
           Discover the Majesty of Agra, Delhi and Rajasthan
         </h2>
         <div data-aos="fade-up"
-     data-aos-duration="3000" className="flex justify-evenly flex-wrap items-center mt-10">
+     data-aos-duration="2000" className="flex justify-evenly flex-wrap items-center gap-5 md:gap-3 lg:gap-3 mt-10">
+         
           <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" className="card-1">
-            <Link to="/golden">
-              <Card
-                className="max-w-sm"
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc={GoldenTriangle}
-              >
-                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
-                  Golden Triangle
-                </h5>
-                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
-                  Explore the majestic forts and palaces of Agra and Rajasthan
-                  and Delhi, Experience the rich history
-                </p>
-              </Card>
-            </Link>
-          </div>
-
-          <div data-aos="fade-up"
-     data-aos-duration="3000" className="card-1">
+     data-aos-duration="2000" className="card-1">
             <Link to="/rajeshtan" className="">
               <Card
                 className="max-w-sm"
@@ -196,7 +188,27 @@ function Home() {
           </div>
 
           <div data-aos="fade-up"
-     data-aos-duration="3000" className="card-1">
+     data-aos-duration="2000" className="card-1">
+            <Link to="/golden">
+              <Card
+                className="max-w-sm"
+                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgSrc={GoldenTriangle}
+              >
+                <h5 className="text-2xl playfair  font-bold tracking-tight text-gray-900 dark:text-white">
+                  Golden Triangle
+                </h5>
+                <p className="font-normal text-gray-700 dark:text-gray-400 lato-bold">
+                  Explore the majestic forts and palaces of Agra and Rajasthan
+                  and Delhi, Experience the rich history
+                </p>
+              </Card>
+            </Link>
+          </div>
+
+ 
+          <div data-aos="fade-up"
+     data-aos-duration="2000" className="card-1">
             <Link to="/sameday">
               <Card
                 className="max-w-sm"
@@ -218,31 +230,32 @@ function Home() {
 
       {/* same day tour */}
 
-      <div>
+      <div className=" ">
         <h2 data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500" className=" font-bold text-center mt-10 playfair text-6xl">
+     data-aos-duration="1000" className=" font-bold text-center mt-10 playfair text-3xl md:text-4xl lg:text-4xl">
           Same Day Tour
         </h2>
         <div data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500" className="flex justify-evenly flex-wrap items-center mt-10">
+     data-aos-duration="1000" className=" gap-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ml-10 mx-auto items-center mt-5   ">
           <div data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500" className="card-1">
+     data-aos-duration="1000" className="card-1">
             <Card
-              className="max-w-sm"
+              className=" w-72 h-96"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_2}
             >
               <Link to="/sameday">
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 playfair">
                 Same Day Delhi to Agra
               </h5>
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 playfair">
                 By Car
               </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
+              <p className="font-normal text-sm
+               text-gray-700 dark:text-gray-400">
                 <FontAwesomeIcon
                   icon={faLocationDot}
                   style={{ color: "#FFD43B" }}
@@ -250,13 +263,13 @@ function Home() {
                 Taj Mahal/AgraFort......
               </p>
               </Link>
-              <div className="flex justify-evenly items-center">
+              <div className="flex justify-between items-center">
               <Link to="/sameday">
                 <p>Read More</p>
                 </Link>
                 <div>
                   <button
-                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md "
+                    className="bg-orange-500 hover:bg-orange-700 text-white font-bold p-2 rounded-md text-sm"
                     onClick={handleOpenModal}
                   >
                     Book Now
@@ -324,20 +337,20 @@ function Home() {
 
           <div data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500" className="card-2">
+     data-aos-duration="1000" className="card-2">
             <Card
-              className="max-w-sm"
+              className=" w-72 h-96 "
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_1}
             >
                  <Link to="/samedaytrain">
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Agra
               </h5>
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 By Train
               </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
+              <p className="font-normal text-gray-700">
                 <FontAwesomeIcon
                   icon={faLocationDot}
                   style={{ color: "#FFD43B" }}
@@ -345,7 +358,7 @@ function Home() {
                 Taj Mahal/AgraFort......
               </p>
               </Link>
-              <div className="flex justify-evenly items-center">
+              <div className="flex justify-between items-center">
               <Link to="/samedaytrain">
                 <p>Read More</p>
                 </Link>
@@ -419,17 +432,17 @@ function Home() {
 
           <div data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500" className="card-3">
+     data-aos-duration="1000" className="card-3">
             <Card
-              className="max-w-sm"
+              className="w-72 h-96"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_3}
             >
               <Link to="/samedaycarjai">
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Jaipur
               </h5>
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 By Car
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
@@ -437,10 +450,10 @@ function Home() {
                   icon={faLocationDot}
                   style={{ color: "#FFD43B" }}
                 />{" "}
-                Amber Fort, City Palace, and Hawa Mahal
+                Amber Fort, City Palace.....
               </p>
               </Link>
-              <div className="flex justify-evenly items-center">
+              <div className="flex justify-between items-center">
               <Link to="/samedaycarjai">
                 <p>Read More</p>
                 </Link>
@@ -514,28 +527,28 @@ function Home() {
 
           <div data-aos="fade-down"
      data-aos-easing="linear"
-     data-aos-duration="1500" className="card-4">
+     data-aos-duration="1000" className="card-4">
             <Card
-              className="max-w-sm mt-5"
+              className="w-72 h-96"
               imgAlt="Meaningful alt text for an image that is not purely decorative"
               imgSrc={sameday_4}
             >
                 <Link to="/samedaytrainjai">
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 Same Day Delhi to Jaipur
               </h5>
-              <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white playfair">
+              <h5 className="text-md md:text-lg lg:text-lg font-bold tracking-tight text-gray-900 dark:text-white playfair">
                 By Train
               </h5>
-              <p className="font-normal text-gray-700 dark:text-gray-400">
+              <p className="font-normal text-gray-700">
                 <FontAwesomeIcon
                   icon={faLocationDot}
                   style={{ color: "#FFD43B" }}
                 />{" "}
-                Amber Fort, City Palace, and Hawa Mahal
+                Amber Fort, City Palace...
               </p>
               </Link>
-              <div className="flex justify-evenly items-center">
+              <div className="flex justify-between items-center">
               <Link to="/samedaytrainjai">
                 <p>Read More</p>
                 </Link>
@@ -609,14 +622,17 @@ function Home() {
         </div>
       </div>
 
-      {/* Rajesthan Tour */}
+      {/* rajesthan and golden tour */}
 
-      <div data-aos="fade-up"
-     data-aos-duration="3000">
-        <h2 className=" font-bold text-center mt-10 playfair text-6xl">
+<div className="flex justify-center  items-center gap-10 flex-wrap md:flex-nowrap lg:flex-nowrap">
+  {/* Rajesthan Tour */}
+<div data-aos="fade-up"
+     data-aos-duration="2000">
+      <h2 className=" font-bold text-center mt-10 playfair text-4xl">
           Rajasthan Tour
         </h2>
         <div className="flex justify-evenly flex-wrap items-center">
+        
           <div className="">
             <Card
               className="max-w-sm mt-5 card-1"
@@ -709,14 +725,16 @@ function Home() {
         </div>
       </div>
 
+      
       {/* Golden Tour */}
 
       <div  data-aos="fade-up"
-     data-aos-duration="3000">
-        <h2 className="playfair text-6xl font-bold text-center mt-10 ">
+     data-aos-duration="2000">
+      <h2 className="playfair text-4xl  text-center font-bold  mt-10 ">
           Golden Triangle Tour
         </h2>
         <div className="flex justify-evenly flex-wrap items-center">
+        
           <div className="card-1">
             <Card
               className="max-w-sm mt-5"
@@ -811,13 +829,10 @@ function Home() {
         </div>
       </div>
 
-
-      {/* Goa */}
-     
       <div  data-aos="fade-up"
-     data-aos-duration="3000">
-        <h2 className="playfair text-6xl font-bold text-center mt-10 ">
-        Goa Awaits: Sun, Sand, and Sea
+     data-aos-duration="2000">
+        <h2 className="playfair text-4xl  font-bold text-center mt-10 ">
+        Goa Tour
         </h2>
         <div className="flex justify-evenly flex-wrap items-center">
           <div className="card-1">
@@ -913,11 +928,20 @@ function Home() {
           </div>
         </div>
       </div>
+</div>
+
+      
+
+
+
+      {/* Goa */}
+     
+      
  {/* Internatiol  */}
 
  <div>
           <h2 data-aos="fade-up"
-     data-aos-duration="2000" className="text-6xl font-bold text-center mt-10 playfair">
+     data-aos-duration="2000" className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mt-10 playfair">
        Nepal & Bhutan: A Journey to the Himalayas
         </h2>
         <div className="flex justify-evenly flex-wrap items-center mt-5">
@@ -961,60 +985,65 @@ function Home() {
 
       {/* what we offer */}
 
-      <div data-aos="zoom-in-left" className="">
-        <h2 className="playfair text-6xl font-bold text-center mt-10">
-          What we offer
-        </h2>
-        <div className="flex flex-wrap justify-evenly items-center mt-10">
-          <div className="Car Rental card-1">
-            <Card
-              className="max-w-sm mt-5"
-              imgAlt="Meaningful alt text for an image that is not purely decorative"
-              imgSrc={car_rental}
-            >
-              <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
-                Rental Car
-              </h5>
-              <p className="font-normal text-gray-700 lato-bold">
-                You can Book cabs or taxi in Agra for full day sightseeings.
-              </p>
-            </Card>
-          </div>
-          <div className="Tour-guide card-1">
-            <Card
-              className="max-w-sm mt-5"
-              imgAlt="Meaningful alt text for an image that is not purely decorative"
-              imgSrc={Guide}
-            >
-              <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
-                Tour Guide
-              </h5>
-              <p className="font-normal text-gray-700 lato-bold">
-                Book your local private tour guide & explore beautiful cities in
-                India.
-              </p>
-            </Card>
-          </div>
-          <div className="Hotel card-1">
-            <Card
-              className="max-w-sm mt-5"
-              imgAlt="Meaningful alt text for an image that is not purely decorative"
-              imgSrc={Hotel}
-            >
-              <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
-                Hotels
-              </h5>
-              <p className="font-normal text-gray-700 lato-bold">
-                Book budget and luxury hotels at best price from us.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </div>
+      <div className="">
+  <h2 className="playfair text-3xl md:text-4xl lg:text-4xl font-bold text-center mt-10">
+    What we offer
+  </h2>
+  <div className="flex flex-wrap justify-evenly items-center mt-10 gap-3">
+    {/* Car Rental */}
+    <div className="Car Rental card-1">
+      <Card
+        className="max-w-sm mt-5 w-[300px] h-[400px] flex flex-col justify-between"
+        imgAlt="Meaningful alt text for an image that is not purely decorative"
+        imgSrc={car_rental}
+      >
+        <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
+          Rental Car
+        </h5>
+        <p className="font-normal text-gray-700 lato-bold">
+          You can Book cabs or taxi in Agra for full day sightseeings.
+        </p>
+      </Card>
+    </div>
+
+    {/* Tour Guide */}
+    <div className="Tour-guide card-1">
+      <Card
+        className="max-w-sm mt-5 w-[300px] h-[400px] flex flex-col justify-between"
+        imgAlt="Meaningful alt text for an image that is not purely decorative"
+        imgSrc={Guide}
+      >
+        <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
+          Tour Guide
+        </h5>
+        <p className="font-normal text-gray-700 lato-bold">
+          Book your local private tour guide & explore beautiful cities in India.
+        </p>
+      </Card>
+    </div>
+
+    {/* Hotels */}
+    <div className="Hotel card-1">
+      <Card
+        className="max-w-sm mt-5 w-[300px] h-[400px] flex flex-col justify-between"
+        imgAlt="Meaningful alt text for an image that is not purely decorative"
+        imgSrc={Hotel}
+      >
+        <h5 className="text-2xl font-bold text-center text-gray-900 playfair">
+          Hotels
+        </h5>
+        <p className="font-normal text-gray-700 lato-bold">
+          Book budget and luxury hotels at best price from us.
+        </p>
+      </Card>
+    </div>
+  </div>
+</div>
+
 
       {/* What Our Clients Say */}
       <div >
-        <h2 className="playfair text-6xl font-bold text-center mt-10">
+        <h2 className="playfair text-3xl md:text-4xl lg:text-4xl font-bold text-center mt-10">
           What Our Clients Say
         </h2>
         <div className="flex flex-wrap justify-center items-center mt-10">
@@ -1024,6 +1053,17 @@ function Home() {
     onSlideChange={() => console.log("slide change")}
     onSwiper={(swiper) => console.log(swiper)}
   >
+    
+    <SwiperSlide>
+      <div className="w-full h-full">
+        <div className=" w-full h-full bg-[#001F3F] ">
+          <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
+          "I booked a same-day tour of Jaipur, and it exceeded all my expectations. The itinerary was perfectly balanced between sightseeing and relaxation. The driver was professional, and the guide brought the city’s history to life!"
+          <br/>
+          -Prashant nair</p>
+        </div>
+      </div>
+    </SwiperSlide>
     <SwiperSlide>
       <div className="w-full h-full">
         
@@ -1032,16 +1072,6 @@ function Home() {
           "The day tour was simply perfect! From the moment we were picked up to the final stop, everything was well-organized and seamless. Our guide was knowledgeable and friendly, making the whole experience even more enjoyable. Highly recommend their services!"<br/>
           -Bella Eperson
 </p>
-        </div>
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div className="w-full h-full">
-        <div className=" w-full h-full bg-[#001F3F] ">
-          <p className="p-4 text-lg text-white text-center">⭐ ⭐ ⭐ ⭐ ⭐<br/>
-          "I booked a same-day tour of Jaipur, and it exceeded all my expectations. The itinerary was perfectly balanced between sightseeing and relaxation. The driver was professional, and the guide brought the city’s history to life!"
-          <br/>
-          -Prashant nair</p>
         </div>
       </div>
     </SwiperSlide>
@@ -1068,63 +1098,6 @@ function Home() {
     </SwiperSlide>
   </Swiper>
 </div>
-      </div>
-
-      {/* Start your Journey */}
-
-      <div data-aos="zoom-out-down" className="flex justify-center items-center size-full">
-        <div>
-          <h2 className="playfair text-6xl font-bold text-center mt-10">
-            Start Your Journey
-          </h2>
-          <form className="mt-10" onSubmit={onSubmit}>
-            <FloatingLabel
-              variant="outlined"
-              color="success"
-              label=" Name"
-              type="text"
-              name="name"
-              sizing="sm"
-              className=""
-              required
-            />
-            <FloatingLabel
-              variant="outlined"
-              color="success"
-              label="Email"
-              type="email"
-              name="email"
-              sizing="sm"
-              required
-              className=""
-            />
-            <FloatingLabel
-              variant="outlined"
-              color="success"
-              label="Phone Number"
-              type="number"
-              name="number"
-              sizing="sm"
-              required
-              className=""
-            />
-            <div className="max-w-md">
-              <div className="mb-2 block"></div>
-              <Textarea
-                variant="outlined"
-                color="success"
-                id="comment"
-                placeholder="Enter Tour Name"
-                required
-                rows={4}
-              />
-            </div>
-
-            <button className="border-green-600 border-2 mt-5 px-3 rounded-md text-green-500">
-              Submit Now
-            </button>
-          </form>
-        </div>
       </div>
     </>
   );
